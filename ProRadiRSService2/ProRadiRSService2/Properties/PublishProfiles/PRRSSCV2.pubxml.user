@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+このファイルは、Web プロジェクトの発行/パッケージ処理で使用されます。この MSBuild ファイルを編集することによって、
+この処理の動作をカスタマイズできます。詳細については、http://go.microsoft.com/fwlink/?LinkID=208121 を参照してください。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\開発\外部レポート\20180308\ProRadiRSService2\www\ProRadiRSService2</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/DBLib.dll">
+      <publishTime>06/07/2006 15:09:06</publishTime>
+    </File>
+    <File Include="bin/LogController.dll">
+      <publishTime>07/09/2016 17:11:12</publishTime>
+    </File>
+    <File Include="bin/Mono.Security.dll">
+      <publishTime>03/10/2015 03:42:42</publishTime>
+    </File>
+    <File Include="bin/MyAccDB.dll">
+      <publishTime>08/18/2015 14:05:16</publishTime>
+    </File>
+    <File Include="bin/Npgsql.dll">
+      <publishTime>03/10/2015 03:42:42</publishTime>
+    </File>
+    <File Include="bin/ProRadiRSService2.dll">
+      <publishTime>06/06/2018 19:00:36</publishTime>
+    </File>
+    <File Include="ProRadiRSService2.svc">
+      <publishTime>02/13/2018 10:48:56</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/05/2018 15:29:04</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
