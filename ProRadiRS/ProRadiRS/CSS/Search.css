@@ -1,0 +1,715 @@
+﻿/* 全体 */
+*
+{
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+/* HTMLタグ単位 */
+body 
+{
+    font-family:Arial, "ＭＳ Ｐゴシック", sans-serif;
+    overflow:hidden;
+    background-color:#485E7E;
+}
+
+.head
+{
+    background-image:url("../img/タイトルバーBG.png?20151124");
+}
+
+/* クラス単位 */
+/* 行 */
+.RowHeader
+{
+    background: #1B3AB4;
+    color: #F5F5F5;
+    height:24px;
+}
+.Row0
+{
+    background: #F5F5F5;
+    height:30px;
+}
+.Row1
+{
+    background: #E0E6FF;
+    height:30px;
+}
+
+#Row2
+{
+    background: #FFA500;
+}
+#Row3
+{
+    background: #FF4500;
+}
+#Row4
+{
+    background: #4E74E6;
+}
+#Row5
+{
+    background: #1BBAFE;
+}
+#Row6
+{
+    background: #FF6699;
+}
+#Row7
+{
+    background: #A0D326;
+}
+/* 画像確認済 行 */
+.RowImageCheck0
+{
+    background: #FDDDDD;
+    height:30px;
+}
+.RowImageCheck1
+{
+    background: #FECDCD;
+    height:30px;
+}
+
+
+/* 列 */
+.ReadButton,
+.ViewerButton,
+.ImageRequestButton,
+.ImageCheckButton
+{
+    width :68px;
+}
+.iProMedID
+{
+    width: 155px;
+    padding-left:5px;
+}
+.Status
+{
+    width:90px;
+    text-align:center;
+}
+.Priority
+{
+    width:50px;
+    text-align:center;
+}
+.PatientAge
+{
+    width:60px;
+    text-align:center;
+}
+.PatientSex
+{
+    width:50px;
+    text-align:center;
+}
+.StudyDateTime
+{
+    /*width:160px;*/width:90px;
+    text-align:center;
+}
+.Modality
+{
+    width:60px;
+    text-align:center;
+}
+.StudyBodyPart
+{
+    width:75px;
+    padding-left:5px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.Comment3
+{
+    width:150px;
+    padding-left:5px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.Comment2/*連絡事項追加用*/
+{
+    width:150px;
+    padding-left:5px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.ReportReserve8
+{
+    width:50px;
+    text-align:center;
+}
+.Diagnosing{
+    width:240px;
+    padding-left:10px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+/*受付アカウント時切り替え用*/
+.Diagnosing2{
+    width:240px;
+    padding-left:10px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.RequestedPhysicianName
+{
+    width:100px;
+    padding-left:5px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.AuthorizationPhysicianName
+{
+    width:150px;
+    padding-left:5px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.RadiologistName
+{
+    width:100px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+/* 要素 */
+.inputReadButton,
+.inputViewerButton,
+.inputImageRequestButton,
+.inputImageCheckButton,
+.inputNoneditButton
+{
+    background-size:100%;
+    background-repeat:no-repeat;
+    border:0px;
+    outline:none;
+    cursor:pointer;
+    width:100%;
+    height:26px;
+}
+/* 読影ボタン画像 */
+.inputReadButton-off
+{
+    background-image:url("../img/読影_off.png?20151124");
+}
+.inputReadButton-on
+{
+    background-image:url("../img/読影_on.png?20151124");
+}
+.inputReadButton-over
+{
+    background-image:url("../img/読影_over.png?20151124");
+}
+/* 閲覧ボタン画像 */
+.inputNoneditButton-off
+{
+    background-image:url("../img/閲覧.png?20151124");
+}
+.inputNoneditButton-on
+{
+    background-image:url("../img/閲覧_on.png?20151124");
+}
+.inputNoneditButton-over
+{
+    background-image:url("../img/閲覧_over.png?20151124");
+}
+
+/* 予備Viewer読影ボタン画像 */
+.inputReadButtonReserve-off
+{
+    background-image:url("../img/読影予備_off.png?20151124");
+}
+.inputReadButtonReserve-on
+{
+    background-image:url("../img/読影予備_on.png?20151124");
+}
+.inputReadButtonReserve-over
+{
+    background-image:url("../img/読影予備_over.png?20151124");
+}
+/* 予備Viewer閲覧ボタン画像 */
+.inputNoneditButtonReserve-off
+{
+    background-image:url("../img/閲覧予備_off.png?20151124");
+}
+.inputNoneditButtonReserve-on
+{
+    background-image:url("../img/閲覧予備_on.png?20151124");
+}
+.inputNoneditButtonReserve-over
+{
+    background-image:url("../img/閲覧予備_over.png?20151124");
+}
+/* Viewerボタン画像 */
+.inputViewerButton-off
+{
+    background-image:url("../img/Viewer_off.png?20151124");
+}
+.inputViewerButton-on
+{
+    background-image:url("../img/Viewer_on.png?20151124");
+}
+.inputViewerButton-over
+{
+    background-image:url("../img/Viewer_over.png?20151124");
+}
+/* 画像データ取得ボタン画像 */
+.inputImageRequestButton-off
+{
+    background-image:url("../img/画像データ取得_off.png?20151124");
+}
+.inputImageRequestButton-on
+{
+    background-image:url("../img/画像データ取得_on.png?20151124");
+}
+.inputImageRequestButton-over
+{
+    background-image:url("../img/画像データ取得_over.png?20151124");
+}
+/* 画像確認ボタン画像 */
+.inputImageCheckButton-off
+{
+    background-image:url("../img/画像確認_off.png?20151124");
+}
+.inputImageCheckButton-on
+{
+    background-image:url("../img/画像確認_on.png?20151124");
+}
+.inputImageCheckButton-over
+{
+    background-image:url("../img/画像確認_over.png?20151124");
+}
+
+
+/* ID単位 */
+#SearchTop
+{
+    background-image:url("../img/ヘッダーBG.png?20151124");
+    height:55px;
+}
+#SearchCenter
+{
+    background-color:#485E7E;
+}
+#SearchBottom
+{
+    height:0px;
+    background-color:#CCCCCC;
+}
+
+#SearchMenu
+{
+    background-image:url("../img/ヘッダーBG.png?20151124");
+    width:100%;
+    height:51px;
+}
+#SearchCount
+{
+    background-image:url("../img/検査結果BG.png?20151124");
+    background-size:100%;
+    background-repeat:no-repeat;
+    position:absolute;
+    width:130px;
+    height:50px;
+    top: 4px;
+    left: 3px;
+}
+#SearchUser
+{
+    background-color:#485E7E;
+    width:185px;
+    height:50px;
+    margin-left:auto;
+    margin-right:0px;
+    position:relative;
+    display:none;
+}
+
+/* 依頼レポート */
+#btnSearch
+{
+    background-size:100%;
+    background-repeat:no-repeat;
+    border:0px;
+    outline:none;
+    cursor:pointer;
+    position:relative;
+    width:142px;
+    height:38px;
+    top: 10px;
+}
+.btnSearch-on
+{
+    background:url(../img/依頼_on.png?20151124);
+}
+.btnSearch-off
+{
+    background:url(../img/依頼_off.png?20151124);
+}
+.btnSearch-over
+{
+    background:url(../img/依頼_over.png?20151124);
+}
+/* 緊急読影レポート */
+#btnSearchEM
+{
+    background-size:100%;
+    background-repeat:no-repeat;
+    border:0px;
+    outline:none;
+    cursor:pointer;
+    position:absolute;
+    width:139px;
+    height:44px;
+    position:absolute;
+    top: 7px;
+    left: 310px;
+}
+.btnSearchEM-on
+{
+    background:url(../img/緊急読影_on.png?20151124);
+}
+.btnSearchEM-off
+{
+    background:url(../img/緊急読影_off.png?20151124);
+}
+.btnSearchEM-over
+{
+    background:url(../img/緊急読影_over.png?20151124);
+}
+/* 読影済みレポート */
+#btnSearchREAD
+{
+    background-size:100%;
+    background-repeat:no-repeat;
+    border:0px;
+    outline:none;
+    cursor:pointer;
+    position:relative;
+    width:100px;
+    height:38px;
+    top: 10px;
+    left: 10px;
+}
+.btnSearchREAD-on
+{
+    background:url(../img/読影済み_on.png?20151124);
+}
+.btnSearchREAD-off
+{
+    background:url(../img/読影済み_off.png?20151124);
+}
+.btnSearchREAD-over
+{
+    background:url(../img/読影済み_over.png?20151124);
+}
+
+#lblPastReportSearch
+{
+    font-size:18px;
+    position:absolute;
+    top:5px;
+    left:400px;
+}
+#cmbPastReprotSearch
+{
+    position:absolute;
+    top:28px;
+    left:400px;
+}
+#btnPastSearch
+{
+    font-size:16px;
+    width:230px;
+    position:absolute;
+    top:26px;
+    left:510px;
+}
+
+#lblSearchCount-Title
+{
+    position:absolute;
+    top:8px;
+    left:17px;
+}
+#lblSearchCount-View
+{
+    position:absolute;
+    top:28px;
+    left:28px;
+}
+
+#reportList
+{
+    height:300px;
+    position:relative;
+    overflow :auto ;
+}
+#tblList
+{
+    background-color:White;
+    width:100%;
+    table-layout:fixed;
+}
+
+/* 設定情報格納divタグ */
+#ReportConfig
+{
+    display:none;
+}
+
+/* 依頼者絞り込み */
+#cmbUserList
+{
+    cursor:pointer;
+    width:100px;
+    position:absolute;
+    left: 3px;
+    top: 17px;
+    height:22px;
+}
+#btnUserSearch
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:30px;
+    height:30px;
+    position:absolute;
+    top: 13px;
+    left: 110px;
+}
+.btnUserSearch-on
+{
+    background:url(../img/依頼_アイコン_on.png?20151124);
+}
+.btnUserSearch-off
+{
+    background:url(../img/依頼_アイコン_off.png?20151124);
+}
+.btnUserSearch-over
+{
+    background:url(../img/依頼_アイコン_over.png?20151124);
+}
+#btnUserSearchREAD
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:30px; 
+    height:30px;
+    position:absolute;
+    top: 13px;
+    left: 148px;
+}
+.btnUserSearchREAD-on
+{
+    background:url(../img/読影済み_アイコン_on.png?20151124);
+}
+.btnUserSearchREAD-off
+{
+    background:url(../img/読影済み_アイコン_off.png?20151124);
+}
+.btnUserSearchREAD-over
+{
+    background:url(../img/読影済み_アイコン_over.png?20151124);
+}
+
+
+.disNone
+{
+    display:none;
+}
+
+/*20150312 A.Umeda 追加*/
+/* 検索条件 */
+#searchMain-position
+{
+    position:absolute;
+    left:140px;
+}
+#search-position
+{
+    position:absolute;
+    left:260px;
+}
+
+#PatientID-position
+{
+    position:absolute;
+    left: 175px;
+    top: 20px;
+}
+#PatientID
+{
+    cursor:pointer;
+    width:100px;
+    height:20px;
+    position:absolute;
+    left: 230px;
+    top: 17px;
+}
+#searchDay-position
+{
+    position:absolute;
+    left: 315px;
+    top: 20px;
+}
+#searchDay
+{
+    cursor:pointer;
+    width:90px;
+    height:20px;
+    position:absolute;
+    left: 385px;
+    top: 17px;
+}
+#modality-position
+{
+    position:absolute;
+    left: 490px;
+    top: 20px;
+}
+#modality
+{
+    cursor:pointer;
+    width:100px;
+    height:22px;
+    position:absolute;
+    left: 530px;
+    top: 17px;
+}
+.searchlabel
+{
+    color:#f5f5f5;
+    width:65px;
+}
+
+/* 検索 */
+#btnSearchSelect
+{
+    background-size:100%;
+    background-repeat:no-repeat;
+    border:0px;
+    outline:none;
+    cursor:pointer;
+    position:absolute;
+    width:100px;
+    height:38px;
+    position:absolute;
+    top: 10px;
+    left: 350px;
+}
+.btnSearchSelect-on
+{
+    background:url(../img/検索_on.png?20151124);
+}
+.btnSearchSelect-off
+{
+    background:url(../img/検索_off.png?20151124);
+}
+.btnSearchSelect-over
+{
+    background:url(../img/検索_over.png?20151124);
+}
+/* 検索条件リセット */
+#btnReset
+{
+    background-size:100%;
+    background-repeat:no-repeat;
+    border:0px;
+    outline:none;
+    cursor:pointer;
+    position:absolute;
+    width:38px;
+    height:38px;
+    position:absolute;
+    top: 10px;
+    left: 470px;
+}
+.btnReset-on
+{
+    
+    background:url(../img/SearchMenuResetActive.png?20151124);
+}
+.btnReset-off
+{
+    background:url(../img/SearchMenuReset.png?20151124);
+}
+.btnReset-over
+{
+    background:url(../img/SearchMenuResetHover.png?20151124);
+}
+
+/* Helpボタン */
+#btnHelp
+{
+    background-size:100%;
+    background-repeat:no-repeat;
+    border:0px;
+    outline:none;
+    cursor:pointer;
+    position:absolute;
+    width:38px;
+    height:38px;
+    position:absolute;
+    top: 10px;
+    left: 520px;
+}
+.btnHelp-on
+{
+    
+    background:url(../img/SearchHelpActive.png?20151124);
+}
+.btnHelp-off
+{
+    background:url(../img/SearchHelp.png?20151124);
+}
+.btnHelp-over
+{
+    background:url(../img/SearchHelpHover.png?20151124);
+}
+
+/* cheacklabelボタン */
+#cheacklabel-position
+{
+    background-size:100%;
+    background-repeat:no-repeat;
+    border:0px;
+    outline:none;
+    cursor:pointer;
+    position:relative;
+    top: 15px;
+    left: 610px;
+    font-size:25px;
+    color:#f5f5f5;
+}
+#viewercheckBox 
+{
+    width:20px;
+    height:20px;
+    position:absolute;
+    left:-25px;
+    top:5px;
+}

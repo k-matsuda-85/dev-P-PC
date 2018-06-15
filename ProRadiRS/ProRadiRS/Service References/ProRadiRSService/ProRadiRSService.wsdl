@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProRadiRSService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ProRadiRSService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://157.2.1.106/ProRadiRSService/ProRadiRSService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://157.2.1.106/ProRadiRSService/ProRadiRSService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://157.2.1.106/ProRadiRSService/ProRadiRSService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://157.2.1.106/ProRadiRSService/ProRadiRSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ProRadiRSService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ProRadiRSService_HelloWorld_InputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_HelloWorld_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetGroupList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupList" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetGroupList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetServerConfigList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerConfigList" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetServerConfigList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerConfigListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetUserList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserList" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetUserList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetReportList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportList" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetReportList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetReportListEmergency_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportListEmergency" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetReportListEmergency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportListEmergencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetReportListRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportListRead" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetReportListRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportListReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetReportListConditional_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportListConditional" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetReportListConditional_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportListConditionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetReportView_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportView" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetReportView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetReportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportData" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetReportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetHistoryReportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoryReportData" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_GetHistoryReportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoryReportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_ReadingStart_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadingStart" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_ReadingStart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadingStartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_CancelReading_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelReading" />
+  </wsdl:message>
+  <wsdl:message name="ProRadiRSService_CancelReading_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelReadingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ProRadiRSService">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadiRSService/HelloWorld" message="tns:ProRadiRSService_HelloWorld_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadiRSService/HelloWorldResponse" message="tns:ProRadiRSService_HelloWorld_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadiRSService/Login" message="tns:ProRadiRSService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadiRSService/LoginResponse" message="tns:ProRadiRSService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadiRSService/GetGroupList" message="tns:ProRadiRSService_GetGroupList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadiRSService/GetGroupListResponse" message="tns:ProRadiRSService_GetGroupList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerConfigList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadiRSService/GetServerConfigList" message="tns:ProRadiRSService_GetServerConfigList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadiRSService/GetServerConfigListResponse" message="tns:ProRadiRSService_GetServerConfigList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadiRSService/GetUserList" message="tns:ProRadiRSService_GetUserList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadiRSService/GetUserListResponse" message="tns:ProRadiRSService_GetUserList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadiRSService/GetReportList" message="tns:ProRadiRSService_GetReportList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadiRSService/GetReportListResponse" message="tns:ProRadiRSService_GetReportList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportListEmergency">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadiRSService/GetReportListEmergency" message="tns:ProRadiRSService_GetReportListEmergency_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadiRSService/GetReportListEmergencyResponse" message="tns:ProRadiRSService_GetReportListEmergency_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportListRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadiRSService/GetReportListRead" message="tns:ProRadiRSService_GetReportListRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadiRSService/GetReportListReadResponse" message="tns:ProRadiRSService_GetReportListRead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportListConditional">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadiRSService/GetReportListConditional" message="tns:ProRadiRSService_GetReportListConditional_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadiRSService/GetReportListConditionalResponse" message="tns:ProRadiRSService_GetReportListConditional_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportView">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadiRSService/GetReportView" message="tns:ProRadiRSService_GetReportView_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadiRSService/GetReportViewResponse" message="tns:ProRadiRSService_GetReportView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadiRSService/GetReportData" message="tns:ProRadiRSService_GetReportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadiRSService/GetReportDataResponse" message="tns:ProRadiRSService_GetReportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoryReportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadiRSService/GetHistoryReportData" message="tns:ProRadiRSService_GetHistoryReportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadiRSService/GetHistoryReportDataResponse" message="tns:ProRadiRSService_GetHistoryReportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadingStart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadiRSService/ReadingStart" message="tns:ProRadiRSService_ReadingStart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadiRSService/ReadingStartResponse" message="tns:ProRadiRSService_ReadingStart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelReading">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadiRSService/CancelReading" message="tns:ProRadiRSService_CancelReading_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadiRSService/CancelReadingResponse" message="tns:ProRadiRSService_CancelReading_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ProRadiRSService" type="tns:ProRadiRSService">
+    <wsp:PolicyReference URI="#NetTcpBinding_ProRadiRSService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/ProRadiRSService/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/ProRadiRSService/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupList">
+      <soap12:operation soapAction="http://tempuri.org/ProRadiRSService/GetGroupList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerConfigList">
+      <soap12:operation soapAction="http://tempuri.org/ProRadiRSService/GetServerConfigList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserList">
+      <soap12:operation soapAction="http://tempuri.org/ProRadiRSService/GetUserList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportList">
+      <soap12:operation soapAction="http://tempuri.org/ProRadiRSService/GetReportList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportListEmergency">
+      <soap12:operation soapAction="http://tempuri.org/ProRadiRSService/GetReportListEmergency" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportListRead">
+      <soap12:operation soapAction="http://tempuri.org/ProRadiRSService/GetReportListRead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportListConditional">
+      <soap12:operation soapAction="http://tempuri.org/ProRadiRSService/GetReportListConditional" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportView">
+      <soap12:operation soapAction="http://tempuri.org/ProRadiRSService/GetReportView" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportData">
+      <soap12:operation soapAction="http://tempuri.org/ProRadiRSService/GetReportData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoryReportData">
+      <soap12:operation soapAction="http://tempuri.org/ProRadiRSService/GetHistoryReportData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadingStart">
+      <soap12:operation soapAction="http://tempuri.org/ProRadiRSService/ReadingStart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelReading">
+      <soap12:operation soapAction="http://tempuri.org/ProRadiRSService/CancelReading" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProRadiRSService">
+    <wsdl:port name="NetTcpBinding_ProRadiRSService" binding="tns:NetTcpBinding_ProRadiRSService">
+      <soap12:address location="net.tcp://proradirssrv/ProRadiRSService/ProRadiRSService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://proradirssrv/ProRadiRSService/ProRadiRSService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

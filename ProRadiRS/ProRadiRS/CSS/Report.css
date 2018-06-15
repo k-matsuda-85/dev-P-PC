@@ -1,0 +1,1238 @@
+﻿/* 全体 */
+*
+{
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+/* HTMLタグ単位 */
+body
+{
+    font-family:Arial, "ＭＳ Ｐゴシック", sans-serif;
+    overflow:hidden;
+    color:black;
+}
+
+
+/* クラス単位 */
+.ReportRow-Header
+{
+}
+.ReportRow-Comment1
+{
+    border-bottom: transparent 2px solid;
+    height:50px;
+}
+.ReportRow-Comment2
+{
+    height:45px;
+    border-bottom: transparent 2px solid;
+}
+.ReportRow-Finding
+{
+    height:70%;
+    /* heightはjavascriptによる自動計算 */
+    border-bottom: transparent 2px solid;
+}
+.ReportRow-Diagnosing
+{
+    height:34px;
+    /* heightはjavascriptによる自動計算 */
+    border-bottom: transparent 2px solid;
+}
+.ReportRow-Images
+{
+    /*height:119px;*/
+    border-bottom: transparent 2px solid;
+}
+/* テキスト */
+.ReportComment,
+.ReportRead
+{
+    width:100%;
+    height:100%;
+    border-width:0px;
+    line-height:110%;
+    resize:none;        /* safari・chromeでの右下のサイズ変更摘みを非表示 */
+}
+/* キー画像 */
+.KeyImage-Item
+{
+    background-size:100%;
+    background-position:center center;
+    background-repeat:no-repeat;
+    width:100px;
+    height:100px;
+    margin:0px 5px 5px 10px;
+    /*float:left;*/
+}
+/* キー画像 枚数*/
+.KeyImage-Count
+{
+    text-align:center;
+    width:100px;
+    margin-left:10px;
+}
+
+/* キー画像エリア*/
+.KeyImage-box
+{
+    width:110px;
+    margin:5px 5px 5px 10px;
+    float:left;
+}
+
+/* ID単位 */
+#ReportTop
+{
+    overflow:auto;
+    height:85px;
+    background-image:url("../img/Report/ヘッダーBG.png?20141110")
+}
+#Report-body
+{
+    overflow-y:auto;
+    min-height:85px;
+    background-color:#485E7E;
+    position:relative;
+    z-index:1;
+}
+#ReportCenter,
+/*#ReportRow1,*/
+#ReportRow2,
+#ReportRow3,
+#ReportRow4,
+#ReportRow5,
+#ReportRow6
+{
+    background-color:#485E7E;
+    overflow:auto;
+    
+}
+#ReportRow2 td,
+#ReportRow3 td,
+#ReportRow4 td
+{
+    vertical-align:bottom;
+}
+#ReportBottom
+{
+    background-image:url("../img/Report/最下段ボタン後ろBG.png?20141110");
+    height:60px;
+    min-width:1195px;
+    overflow:hidden;
+}
+
+/* テーブル */
+#ReportCenter-Report
+{
+    width:99%;
+    table-layout:fixed;
+}
+/* テーブル列 */
+#ReportRow1-HeadCol1
+{
+    width:40px;
+    max-width:40px;
+}
+#ReportRow1-HeadCol2
+{
+    width:53%;
+}
+#ReportRow1-HeadCol3
+{
+    width:1%;
+    width:15px;
+    max-width:15px;
+    min-width:15px;
+}
+#ReportRow1-HeadCol4
+{
+    /*width:40%;*/
+    width:44%;
+}
+#ReportRow1-HeadCol5
+{
+    
+}
+#ReportRow2-Col,
+#ReportRow3-Col,
+#ReportRow4-Col,
+#ReportRow5-Col,
+#ReportRow6-Col
+{
+    text-align:center;
+    width:40px;
+    padding:0px 4px 0px 4px;
+}
+#ReportRow7-Col
+{
+    text-align:center;
+    width:40px;
+    max-width:80px;
+    padding:0px 4px 0px 4px;
+}
+#ReportRow9-Col
+{
+    text-align:center;
+    width:100px;
+    
+}
+/* 見出し画像 */
+#ReportRow2-Caption
+{
+	/*width:100%;*/
+	width:40px;
+    height:100%;
+    background-position: center center;
+	/*background-size:100%;*/
+    background-repeat:no-repeat;
+    background-image:url("../img/Report/依頼内容_見出し.png?20141110");
+    border:0px;
+}
+#ReportRow3-Caption
+{
+    /*width:100%;*/
+	width:40px;
+    height:100%;
+    background-position: center center;
+	/*background-size:100%;*/
+    background-repeat:no-repeat;
+    background-image:url("../img/Report/連絡_見出し.png?20141110");
+    border:0px;
+}
+#ReportRow4-Caption
+{
+    /*width:100%;*/
+	width:40px;
+    height:100%;
+    background-position: center center;
+	/*background-size:100%;*/
+    background-repeat:no-repeat;
+    background-image:url("../img/Report/画像所見_見出し.png?20141110");
+    border:0px;
+}
+#ReportRow5-Caption
+{
+    /*width:100%;*/
+	width:40px;
+    height:100%;
+    background-position: center center;
+	/*background-size:100%;*/
+    background-repeat:no-repeat;
+    background-image:url("../img/Report/診断_見出し.png?20141110");
+    border:0px;
+}
+#ReportRow6-Caption
+{
+    /*width:100%;*/
+	width:40px;
+    /*height:100%;*/
+    height:150px;
+    background-position: center center;
+	/*background-size:100%;*/
+    background-repeat:no-repeat;
+    background-image:url("../img/Report/キー画像_見出し.png?20141110");
+    border:0px;
+}
+#ReportRow7-Caption
+{
+	width:40px;
+    height:100%;
+    background-position: center center;
+	/*background-size:100%;*/
+    background-repeat:no-repeat;
+    background-image:url("../img/Report/依頼内容_見出し.png?20141110");
+    border:0px;
+}
+#ReportRow8-Caption
+{
+	width:80px;
+    height:30px;
+    background-position: center center;
+	/*background-size:100%;*/
+    background-repeat:no-repeat;
+    background-image:url("../img/Report/読影医師_見出し.png?20150136");
+    border:0px;
+}
+
+/* テキストエリア */
+/* 依頼内容・連絡事項 */
+#TxtReportComment1,
+#TxtPastReportComment1,
+#TxtReportComment2,
+#TxtPastReportComment2
+{
+    font-size:14px;
+    border: 3px #c0c0c0 double;
+    background-color:#EEEEEE;
+    box-sizing:border-box;
+    padding-top:3px;
+    padding-left:3px;
+}
+#RadiologistName
+{
+    font-size:14px;
+    border: 3px #c0c0c0 double;
+    background-color:#EEEEEE;
+    box-sizing:border-box;
+    height:30px;
+
+    position:relative;
+}
+/* 所見・診断 */
+#TxtFinding,
+#TxtDiagnosing
+{
+    font-size:16px;
+    border: 3px #c0c0c0 double;
+    background-color:Window;
+    min-width:150px;
+    box-sizing:border-box;
+    padding-top:3px;
+    padding-left:3px;
+}
+/* 履歴 所見・診断 */
+#TxtPastFinding,
+#TxtPastDiagnosing
+{
+    font-size:16px;
+    border: 3px #c0c0c0 double;
+    background-color:#EEEEEE;
+    min-width:150px;
+    box-sizing:border-box;
+    padding-top:3px;
+    padding-left:3px;
+}
+/* キー画像エリア */
+#ReportImages
+{
+    width:100%;
+    /*height:100%;*/
+    height:150px;
+    background-color:White;
+    overflow:auto;
+    border: 3px #c0c0c0 double;
+    position:relative;
+    box-sizing:border-box;
+    min-width:150px;
+}
+/* 履歴 キー画像エリア */
+#PastReportImages
+{
+    width:100%;
+    /*height:100%;*/
+    height:150px;
+    background-color:White;
+    overflow:auto;
+    border: 3px #c0c0c0 double;
+    background-color:#EEEEEE;
+    position:relative;
+    box-sizing:border-box;
+}
+/* 余白 */
+#ReportHeader
+{
+    /*width:100%;*/
+	width:40px;
+    height:100%;
+}
+
+#ReportTop-Info-Left
+{
+    overflow:hidden;
+   /*position:relative;*/
+    width:100%;
+    height:85px;
+}
+#ReportTop-Info-Left-Title
+{
+    background-image:url("../img/Report/左上情報BG.png?20141110");
+    background-size:100%;
+    background-repeat:no-repeat;
+    position:absolute;
+    height: 83px;
+    width: 570px;
+    /*top: 4px;*/
+    left: 10px;
+}
+#Report-ID
+{
+    font-size:24px;
+    vertical-align:middle;
+    position:absolute;
+    height:30px;
+    top: 15px;
+    left: 30px;
+}
+#Report-Info
+{
+    font-size:16px;
+    vertical-align:middle;
+    position:absolute;
+    /*width: 188px;*/
+    top: 20px;
+    left: 292px;
+}
+#Report-StudyInfo1
+{
+    font-size:16px;
+    vertical-align:middle;
+    position:absolute;
+   /* width: 320px;*/
+    height: 22px;
+    top: 53px;
+    left: 30px;
+}
+#Report-StudyInfo2
+{
+    font-size:16px;
+    vertical-align:middle;
+    position:absolute;
+    height: 22px;
+    top: 53px;
+    left: 400px;
+}
+
+#ReportTop-Info-Right
+{
+    overflow:auto;
+    position:relative;
+    height:150px;
+    width:100%;
+    margin:0px 0px 0px 0px
+}
+#ReportHistory
+{
+    font-size:14px;
+    width:100%;
+    table-layout:fixed;
+}
+/* ヘッダー */
+.head
+{
+    background-image:url("../img/タイトルバーBG.png?20141110");
+}
+/* 行の色 */
+.Row0
+{
+    background: #F5F5F5;
+    height:23px;
+}
+.Row1
+{
+    background: #E0E6FF;
+    height:23px;
+}
+.RowHeader
+{
+    background: #1B3AB4;
+    color: #F5F5F5;
+    height:23px;
+}
+.HisReportButton
+{
+    width:66px;
+}
+.HisImageRequestButton
+{
+    width:92px;
+}
+.HisStudyDateTime
+{
+    width:100px;
+    text-align:center;
+}
+.HisModality
+{
+    min-width:40px;
+    text-align:center;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+.HisStudyBodyPart
+{
+    min-width:60px;
+    padding-left:5px;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+.HisDiagnosing
+{
+    width:100px;
+    padding-left:5px;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+/* 履歴 */
+.inputReportButton,
+.inputImageRequestButton
+{
+    background-size:100%;
+    background-repeat:no-repeat;
+    border:0px;
+    outline:none;
+    cursor:pointer;
+    width:100%;
+    height:23px;
+}
+/* 参照ボタン */
+.inputReportButton-off
+{
+    background-Image:url(../img/Report/参照_off.png?20141110);
+}
+.inputReportButton-on
+{
+    background-Image:url(../img/Report/参照_on.png?20141110);
+}
+.inputReportButton-over
+{
+    background-Image:url(../img/Report/参照_over.png?20141110);
+}
+/* 画像データ取得ボタン */
+.inputImageRequestButton-off
+{
+    background-Image:url(../img/Report/画像データ取得_off.png?20141110);
+}
+.inputImageRequestButton-on
+{
+    background-Image:url(../img/Report/画像データ取得_on.png?20141110);
+}
+.inputImageRequestButton-over
+{
+    background-Image:url(../img/Report/画像データ取得_over.png?20141110);
+}
+
+
+/* Viewerボタン */
+#btnViewer
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:111px;
+    height:38px;
+    position:relative;
+    top: 10px;
+    left: 78px;
+}
+.btnViewer-off
+{
+    background:url(../img/Report/Viewer_off.png?20141110);
+}
+.btnViewer-on
+{
+    background:url(../img/Report/Viewer_on.png?20141110);
+}
+.btnViewer-over
+{
+    background:url(../img/Report/Viewer_over.png?20141110);
+}
+
+/* Viewerボタン 予備 */
+#btnViewer_Reserve
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:111px;
+    height:38px;
+    position:relative;
+    top: 10px;
+    left: 600px;
+}
+.btnViewer_Reserve-off
+{
+    background:url(../img/Report/Viewer_Reserve_off.png?20141110);
+}
+.btnViewer_Reserve-on
+{
+    background:url(../img/Report/Viewer_Reserve_on.png?20141110);
+}
+.btnViewer_Reserve-over
+{
+    background:url(../img/Report/Viewer_Reserve_over.png?20141110);
+}
+
+/* キー画像取込ボタン */
+#btnImage
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:111px;
+    height:38px;
+    position:relative;
+    top: 10px;
+    left: 89px;
+}
+.btnImage-off
+{
+    background:url(../img/Report/キー画像取込_off.png?20141110);
+}
+.btnImage-on
+{
+    background:url(../img/Report/キー画像取込_on.png?20141110);
+}
+.btnImage-over
+{
+    background:url(../img/Report/キー画像取込_over.png?20141110);
+}
+.btnImage-disable
+{
+    background:url(../img/Report/キー画像取込_disable.png?20141110);
+}
+
+/* キー画像削除ボタン */
+#btnImageDelete
+{   
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:111px;
+    height:38px;
+    position:relative;
+    top: 10px;
+    left: 89px;
+}
+.btnImageDelete-off
+{
+    background:url(../img/Report/キー画像削除_off.png?20141110);
+}
+.btnImageDelete-on
+{
+    background:url(../img/Report/キー画像削除_on.png?20141110);
+}
+.btnImageDelete-over
+{
+    background:url(../img/Report/キー画像削除_over.png?20141110);
+}
+.btnImageDelete-disable
+{
+    background:url(../img/Report/キー画像削除_disable.png?20141110);
+}
+
+/* 確定ボタン */
+#btnSave
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:111px;
+    height:38px;
+    position:relative;
+    top: 10px;
+    left: 120px;
+}
+.btnSave-off
+{
+    background:url(../img/Report/確定_off.png?20141110);
+}
+.btnSave-on
+{
+    background:url(../img/Report/確定_on.png?20141110);
+}
+.btnSave-over
+{
+    background:url(../img/Report/確定_over.png?20141110);
+}
+.btnSave-disable
+{
+    background:url(../img/Report/確定_disable.png?20141110);
+}
+
+/* 一覧へ戻るボタン */
+#btnReturnList
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:111px;
+    height:38px;
+    position:relative;
+    top: 10px;
+    left: 158px;
+}
+.btnReturnList-off
+{
+    background:url(../img/Report/一覧へ戻る_off.png?20141110);
+}
+.btnReturnList-on
+{
+    background:url(../img/Report/一覧へ戻る_on.png?20141110);
+}
+.btnReturnList-over
+{
+    background:url(../img/Report/一覧へ戻る_over.png?20141110);
+}
+
+/* 一時保存ボタン */
+#btnTempSave
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:111px;
+    height:38px;
+    position:relative;
+    top: 10px;
+    left: 127px;
+}
+.btnTempSave-off
+{
+    background:url(../img/Report/一時保存_off.png?20141110);
+}
+.btnTempSave-on
+{
+    background:url(../img/Report/一時保存_on.png?20141110);
+}
+.btnTempSave-over
+{
+    background:url(../img/Report/一時保存_over.png?20141110);
+}
+.btnTempSave-disable
+{
+    background:url(../img/Report/一時保存_disable.png?20141110);
+}
+
+/* 依頼票ボタン */
+#btnExamOrder
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:111px;
+    height:38px;
+    position:relative;
+    top: 10px;
+    left: 67px;
+}
+.btnExamOrder-off
+{
+    background:url(../img/Report/依頼票_off.png?20141110);
+}
+.btnExamOrder-on
+{
+    background:url(../img/Report/依頼票_on.png?20141110);
+}
+.btnExamOrder-over
+{
+    background:url(../img/Report/依頼票_over.png?20141110);
+}
+.btnExamOrder-disable
+{
+    background:url(../img/Report/依頼票_disable.png?20141110);
+}
+
+/* 読影取り消しボタン */
+#btnReadCancel
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:111px;
+    height:38px;
+    position:relative;
+    top: 10px;
+    left: 20px;
+}
+.btnReadCancel-off
+{
+    background:url(../img/Report/読影取消_off.png?20141110);
+}
+.btnReadCancel-on
+{
+    background:url(../img/Report/読影取消_on.png?20141110);
+}
+.btnReadCancel-over
+{
+    background:url(../img/Report/読影取消_over.png?20141110);
+}
+
+
+/* 読影開始ボタン */
+#btnReadStart
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:111px;
+    height:38px;
+    position:relative;
+    top: 10px;
+    left: 20px;
+}
+.btnReadStart-off
+{
+    background:url(../img/Report/読影開始_off.png?20141110);
+}
+.btnReadStart-on
+{
+    background:url(../img/Report/読影開始_on.png?20141110);
+}
+.btnReadStart-over
+{
+    background:url(../img/Report/読影開始_over.png?20141110);
+}
+
+.back-color{
+    background:pink;
+}
+
+/* 設定情報格納divタグ */
+#ReportConfig
+{
+    display:none;
+}
+
+/* 定型文ボタン */
+#btnSentence
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:111px;
+    height:38px;
+    position:relative;
+    top: 10px;
+    left: 56px;
+}
+.btnSentence-off
+{
+    background:url(../img/Report/定型文_off.png?20141110);
+}
+.btnSentence-on
+{
+    background:url(../img/Report/定型文_on.png?20141110);
+}
+.btnSentence-over
+{
+    background:url(../img/Report/定型文_over.png?20141110);
+}
+.btnSentence-disable
+{
+    background:url(../img/Report/定型文_disable.png?20141110);
+}
+
+/* 変更履歴 */
+#btnHistory
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:111px;
+    height:38px;
+    position:relative;
+    top: 10px;
+    left: 100px;
+}
+.btnHistory-off
+{
+    background:url(../img/Report/キー画像削除_off.png?20141110);
+}
+.btnHistory-on
+{
+    background:url(../img/Report/キー画像削除_on.png?20141110);
+}
+.btnHistory-over
+{
+    background:url(../img/Report/キー画像削除_over.png?20141110);
+}
+.btnHistory-disable
+{
+    background:url(../img/Report/キー画像削除_disable.png?20141110);
+}
+
+/* 変更履歴 */
+#btnEditHist
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:111px;
+    height:38px;
+    position:relative;
+    top: 10px;
+    left: 120px;
+}
+.btnEditHist-off
+{
+    background:url(../img/Report/変更履歴_off.png?20141110);
+}
+.btnEditHist-on
+{
+    background:url(../img/Report/変更履歴_on.png?20141110);
+}
+.btnEditHist-over
+{
+    background:url(../img/Report/変更履歴_over.png?20141110);
+}
+.btnEditHist-disable
+{
+    background:url(../img/Report/変更履歴_disable.png?20141110);
+}
+
+.SubButton{
+    float:left;
+    height:30px;
+        border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    position:relative;
+    top: 0px;
+    margin-left:15px;
+    margin-top:2px;
+}
+
+#btnICopy{
+    background:url(../img/Report/C_日付.png);
+    width:86px;
+    background-size:100%;
+}
+
+#btnFCopy{
+    background:url(../img/Report/所見.png);
+    width:158px;
+    background-size:100%;
+}
+
+#btnDCopy{
+    background:url(../img/Report/C_診断.png);
+    width:132px;
+    background-size:100%;
+}
+
+#btnFDCopy{
+    background:url(../img/Report/C_両方.png);
+    width:157px;
+    background-size:100%;
+}
+
+.modal-ex{
+    right: 0;
+    bottom: 0;
+}
+
+tr.hist-border td{
+    border: 1px #c0c0c0 solid;
+    box-sizing:border-box;
+}
+tr.hist-border td textarea{
+    border: 0px;
+}
+
+#modal-hist div.modal-dialog{
+    /*width:900px;*/
+}
+#modal-hist div.modal-dialog div.modal-content{
+    background-image:url("../img/Report/ヘッダーBG.png?20141110");
+}
+#modal-hist div.modal-dialog div.modal-content div.modal-header button {
+    color:white;
+    opacity:0.8;
+}
+#modal-hist div.modal-dialog div.modal-content div.modal-header h4 {
+    color:white;
+}
+.hist-head{
+    background-color:#DDEBF7;
+}
+
+#tblHistryList tbody{
+    background-color:white;
+}
+#HistryList{
+    overflow:auto;
+}
+
+table.table-headerfixed {
+/*    width: 100%;*/
+}
+
+table.table-headerfixed thead,
+table.table-headerfixed tbody,
+table.table-headerfixed tr,
+table.table-headerfixed td,
+table.table-headerfixed th {
+    display: block;
+}
+
+table.table-headerfixed tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+table.table-headerfixed tbody {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+table.table-headerfixed thead {
+    /* fallback */
+    width: 97%;
+    /* minus scroll bar width */
+    width: calc(100% - 17px);
+}
+
+table.table-headerfixed tbody td,
+table.table-headerfixed thead th {
+    float: left;
+    height: 38px;
+}
+
+#modal{
+    z-index:1030;
+}
+
+#modal div div div.modal-body{
+    max-height:500px;
+}
+
+table thead tr th.dhead-ss
+{
+    width:60px;
+}
+
+table thead tr th.dhead-s
+{
+    width:130px;
+}
+table thead tr th.dhead-dm
+{
+    width:17px;
+}
+table thead tr th.dhead-sp
+{
+    width:calc(100% - 267px);
+}
+table tbody tr td.dhead-ss
+{
+    width:60px;
+}
+table tbody tr td.dhead-s
+{
+    width:130px;
+}
+table tbody tr td.dhead-sp
+{
+    width:calc(100% - 267px);
+}
+table tbody tr td.dhead-dm
+{
+    width:17px;
+}
+
+#tblSentenceList tbody tr:nth-child(2n+1){
+    background-color:rgba(221, 234, 246, 1);
+}
+
+#modal div div.modal-content,
+#modal-sent-edit div div.modal-content{
+    background-color:rgba(179, 198, 230, 1);
+}
+#modal div div div.modal-body ,
+#modal-sent-edit div div div.modal-body{
+    background-color:#F5F5F5;
+}
+
+#tblSentenceList tbody tr td input{
+  height:20px;
+}
+
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
+}
+
+.action-area{
+    margin-left:5px;
+    margin-right:5px;
+}
+
+button.action-area{
+    height:25px;
+    width:80px;
+    border-radius:4px;
+    border-style:solid;
+    border-color:#002060;
+    background-color:rgba(222, 235, 247, 1);
+}
+
+div.action-line{
+    width:100%;
+    height:35px;
+    padding-top:5px;
+}
+
+div#modal-sent-edit{
+    left:-300px;
+    margin:0px 0px 0px 50%;
+    font-family:'Yu Gothic';
+}
+
+.label-title{
+    margin-right:50px;
+}
+
+#sent-title{
+    width:calc(100% - 130px) ;
+}
+
+.edit-line{
+    display:inline-block;
+    width:100%;
+    margin-left:10px;
+    margin-top:10px;
+}
+
+.edit-line-sub{
+    display:inline-block;
+    width:100%;
+    margin-left:10px;
+}
+
+#sent-finding{
+    width:calc(100% - 25px);
+}
+
+#sent-diagnosing{
+    width:calc(100% - 25px);
+}
+
+label.inner-label{
+    font-weight:normal;
+}
+
+div.check-fld{
+    padding-top:7px;
+}
+
+input.edit-btn{
+    border-radius:4px;
+}
+
+#sent-cp{
+    width:150px;
+    background-color:rgba(222, 235, 247, 1);
+    border-style:solid;
+    border-color:#002060;
+}
+
+#sent-delete{
+    margin-left:10px;
+    width:100px;
+    height:35px;
+    background-color:#F5F5F5;
+    border-color:#007EFF;
+    color:#007EFF;
+    border-style:solid;
+    border-width:2px;
+    font-weight:700;
+}
+
+#sent-cancel{
+    margin-right:15px;
+    width:100px;
+    height:35px;
+    background-color:#F5F5F5;
+    border-color:#007EFF;
+    color:#007EFF;
+    border-style:solid;
+    border-width:2px;
+    font-weight:700;
+}
+#sent-edit{
+    margin-right:10px;
+    width:100px;
+    height:35px;
+    background-color:#F5F5F5;
+    border-color:#FF7800;
+    color:#FF7800;
+    border-style:solid;
+    border-width:2px;
+    font-weight:700;
+}
+
+div.modal-body div.form-group{
+    margin-bottom:0px;
+}
+
+div.edit-line-sub textarea{
+    padding-left:3px;
+    padding-top:2px;
+}
+
+#sent-title {
+    padding-left:3px;
+}
+
+td.SetButton input{
+    width:45px;
+    border-radius:4px;
+    border-style:solid;
+    border-color:#002060;
+    background-color:rgba(222, 235, 247, 1);
+}

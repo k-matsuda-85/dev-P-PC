@@ -1,0 +1,102 @@
+﻿/* 全体 */
+*
+{
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+/* HTMLタグ単位 */
+body
+{
+    background-image:url("../img/ヘッダーBG.png?20141110");
+    font-family:Arial, "ＭＳ Ｐゴシック", sans-serif;
+    overflow:hidden;
+    width:100%;
+    height:100%;
+}
+
+/* ID単位 */
+#LoginInputArea
+{
+    background-image:url("../img/ProRadRSLiteﾛｸﾞｲﾝｱﾆﾒ.gif?20141110");
+    background-size:100%;
+    background-repeat:no-repeat;
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:480px;
+    height:360px;
+    margin-left:-250px;
+    margin-top:-200px;
+}
+#LoginID
+{
+    position:absolute;
+    font-family:tahoma;
+    font-size:16px;
+    top: 158px;
+    left: 137px;
+}
+#LoginPW
+{
+    position:absolute;
+    font-family:tahoma;
+    font-size:16px;
+    top: 212px;
+    left: 137px;
+}
+#LoginButton
+{
+    background-size:100%;
+    background-repeat:no-repeat;
+    border:0px;
+    outline:none;
+    cursor:pointer;
+    position:absolute;
+    width: 109px;
+    height: 37px;
+    top: 265px;
+    left: 108px;
+}
+.LoginButton-off
+{
+    background:url(../img/ログインボタン_off.png?20141110);
+}
+.LoginButton-on
+{
+    background:url(../img/ログインボタン_on.png?20141110);
+}
+.LoginButton-over
+{
+    background:url(../img/ログインボタン_over.png?20141110);
+}
+.LoginButton-non
+{
+    background:url(../img/ログインボタン_non.png?20141110);
+}
+
+#ClearButton
+{
+    background-size:100%;
+    background-repeat:no-repeat;
+    border:0px;
+    outline:none;
+    cursor:pointer;
+    position:absolute;
+    width: 109px;
+    height: 37px;
+    top: 265px;
+    left: 258px;
+}
+.ClearButton-off
+{
+    background:url(../img/クリアボタン_off.png?20141110);
+}
+.ClearButton-on
+{
+    background:url(../img/クリアボタン_on.png?20141110);
+}
+.ClearButton-over
+{
+    background:url(../img/クリアボタン_over.png?20141110);
+}

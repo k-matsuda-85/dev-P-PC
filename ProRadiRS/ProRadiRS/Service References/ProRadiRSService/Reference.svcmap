@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f50fc7e4-2fe3-4f90-80e6-e7dbb9e19676" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://157.2.1.106/ProRadiRSService/ProRadiRSService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProRadiRSService.disco" MetadataType="Disco" ID="8301d6bd-0602-4657-9fc1-0ad20d496c0f" SourceId="1" SourceUrl="http://157.2.1.106/ProRadiRSService/ProRadiRSService.svc?disco" />
+    <MetadataFile FileName="ProRadiRSService.wsdl" MetadataType="Wsdl" ID="a40c3010-add4-4129-86aa-2895a2b70305" SourceId="1" SourceUrl="http://157.2.1.106/ProRadiRSService/ProRadiRSService.svc?wsdl" />
+    <MetadataFile FileName="ProRadiRSService.xsd" MetadataType="Schema" ID="6ac9b61d-81c6-4935-95c0-b06c29d55812" SourceId="1" SourceUrl="http://157.2.1.106/ProRadiRSService/ProRadiRSService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProRadiRSService1.xsd" MetadataType="Schema" ID="77dc52e8-7686-4dab-8775-2629bddb4ab5" SourceId="1" SourceUrl="http://157.2.1.106/ProRadiRSService/ProRadiRSService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProRadiRSService2.xsd" MetadataType="Schema" ID="88362c6e-d044-4814-9afb-dcb2257a194f" SourceId="1" SourceUrl="http://157.2.1.106/ProRadiRSService/ProRadiRSService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ProRadiRSService3.xsd" MetadataType="Schema" ID="cf9c7808-1991-446c-9491-fced6a385a7d" SourceId="1" SourceUrl="http://157.2.1.106/ProRadiRSService/ProRadiRSService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

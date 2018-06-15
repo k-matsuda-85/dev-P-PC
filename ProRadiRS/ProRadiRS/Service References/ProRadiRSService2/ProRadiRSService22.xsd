@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50189/ProRadiRSService2.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:50189/ProRadiRSService2.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ProRadiRSService2" />
+  <xs:element name="AutoLoginCheck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserCD" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutoLoginCheckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AutoLoginCheckResult" type="xs:boolean" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="userinfo" nillable="true" type="q1:ArrayOfArrayOfstring" />
+        <xs:element minOccurs="0" name="retErrMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSentenceData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userCD" type="xs:int" />
+        <xs:element minOccurs="0" name="userGroupCD" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSentenceDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSentenceDataResult" type="xs:boolean" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SentenceList" nillable="true" type="q2:ArrayOfArrayOfstring" />
+        <xs:element minOccurs="0" name="retErrMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChangeHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userCD" type="xs:int" />
+        <xs:element minOccurs="0" name="SerialNo" type="xs:int" />
+        <xs:element minOccurs="0" name="imagePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChangeHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetChangeHistoryResult" type="xs:boolean" />
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="HistoryDataList" nillable="true" type="q3:ArrayOfArrayOfstring" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ImageDataList" nillable="true" type="q4:ArrayOfArrayOfstring" />
+        <xs:element minOccurs="0" name="retErrMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userCd" type="xs:int" />
+        <xs:element minOccurs="0" name="serialNo" type="xs:int" />
+        <xs:element minOccurs="0" name="finding" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="diagnosing" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imgCnt" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveReportResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveReportImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="images" nillable="true" type="q5:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveReportImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveReportImageResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSentence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="scd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="val1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="val2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pcd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSentenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSentenceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userCd" type="xs:int" />
+        <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imagePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetImageExtResult" nillable="true" type="q6:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSentence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="scd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSentenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSentenceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ProRadiRSService2" minOccurs="0" name="GetUserListResult" nillable="true" type="q7:ArrayOfUserMst2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

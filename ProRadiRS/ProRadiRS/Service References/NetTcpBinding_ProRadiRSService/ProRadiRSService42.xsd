@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.11.101/ProRadiRSService_test/ProRadiRSService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://192.168.11.101/ProRadiRSService_test/ProRadiRSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ProRadiRSService" />
+  <xs:element name="HelloWorld">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HelloWorldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HelloWorldResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loginID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginPW" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginResult" type="xs:int" />
+        <xs:element minOccurs="0" name="userCd" type="xs:int" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupCd" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="groupType" nillable="true" type="q1:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetGroupListResult" type="xs:int" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ProRadiRSService" minOccurs="0" name="lstGroup" nillable="true" type="q2:ArrayOfGroupMst" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServerConfigList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServerConfigListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServerConfigListResult" type="xs:int" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ProRadiRSService" minOccurs="0" name="lstServerConfig" nillable="true" type="q3:ArrayOfServerConfigMst" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserListResult" type="xs:int" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ProRadiRSService" minOccurs="0" name="lstUser" nillable="true" type="q4:ArrayOfUserMst" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetReportListResult" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ProRadiRSService" minOccurs="0" name="lstView" nillable="true" type="q5:ArrayOfReportView" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportListEmergency">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportListEmergencyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetReportListEmergencyResult" type="xs:int" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ProRadiRSService" minOccurs="0" name="lstView" nillable="true" type="q6:ArrayOfReportView" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportListRead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportListReadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetReportListReadResult" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ProRadiRSService" minOccurs="0" name="lstView" nillable="true" type="q7:ArrayOfReportView" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportListConditional">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studyDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="modality" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportListConditionalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetReportListConditionalResult" type="xs:int" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ProRadiRSService" minOccurs="0" name="lstView" nillable="true" type="q8:ArrayOfReportView" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="serialNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetReportViewResult" type="xs:int" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ProRadiRSService" minOccurs="0" name="view" nillable="true" type="q9:ReportView" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="serialNo" type="xs:int" />
+        <xs:element minOccurs="0" name="userCd" type="xs:int" />
+        <xs:element minOccurs="0" name="imagePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetReportDataResult" type="xs:int" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ProRadiRSService" minOccurs="0" name="view" nillable="true" type="q10:ReportView" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="image" nillable="true" type="q11:ArrayOfstring" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ProRadiRSService" minOccurs="0" name="history" nillable="true" type="q12:ArrayOfReportHistory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoryReportData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userCd" type="xs:int" />
+        <xs:element minOccurs="0" name="serialNo" type="xs:int" />
+        <xs:element minOccurs="0" name="imagePath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoryReportDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistoryReportDataResult" type="xs:int" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ProRadiRSService" minOccurs="0" name="view" nillable="true" type="q13:ReportView" />
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="image" nillable="true" type="q14:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadingStart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="serialNo" type="xs:int" />
+        <xs:element minOccurs="0" name="department" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadingStartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadingStartResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelReading">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="serialNo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelReadingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelReadingResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

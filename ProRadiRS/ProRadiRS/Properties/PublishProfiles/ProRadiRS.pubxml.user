@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+このファイルは、Web プロジェクトの発行/パッケージ処理で使用されます。この MSBuild ファイルを編集することによって、
+この処理の動作をカスタマイズできます。詳細については、http://go.microsoft.com/fwlink/?LinkID=208121 を参照してください。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\実行環境\ProRadiRS_2\ProRadiRS</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/CustomConfig.dll">
+      <publishTime>10/03/2013 20:17:18</publishTime>
+    </File>
+    <File Include="bin/CustomLog.dll">
+      <publishTime>07/01/2011 16:50:10</publishTime>
+    </File>
+    <File Include="bin/DcmtkCtrl.dll">
+      <publishTime>11/04/2009 18:54:06</publishTime>
+    </File>
+    <File Include="bin/DcmUtil.dll">
+      <publishTime>03/04/2014 11:48:38</publishTime>
+    </File>
+    <File Include="bin/DicomAnalyzer3.dll">
+      <publishTime>12/18/2014 10:44:36</publishTime>
+    </File>
+    <File Include="bin/DicomSplitter.dll">
+      <publishTime>02/22/2012 12:04:48</publishTime>
+    </File>
+    <File Include="bin/ProRadiRS.dll">
+      <publishTime>06/06/2018 19:02:09</publishTime>
+    </File>
+    <File Include="bin/ProRadServiceLib.dll">
+      <publishTime>03/16/2018 17:03:15</publishTime>
+    </File>
+    <File Include="bin/protobuf-net.dll">
+      <publishTime>09/30/2013 09:20:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/TryDb.dll">
+      <publishTime>01/13/2015 11:37:16</publishTime>
+    </File>
+    <File Include="bin/YCom.dll">
+      <publishTime>02/12/2015 18:39:56</publishTime>
+    </File>
+    <File Include="CommonWebService.asmx">
+      <publishTime>02/05/2018 13:08:34</publishTime>
+    </File>
+    <File Include="CSS/Add/bootstrap-theme.css">
+      <publishTime>07/05/2016 14:02:52</publishTime>
+    </File>
+    <File Include="CSS/Add/bootstrap.css">
+      <publishTime>06/06/2018 12:20:58</publishTime>
+    </File>
+    <File Include="CSS/common.css">
+      <publishTime>05/08/2015 20:23:10</publishTime>
+    </File>
+    <File Include="CSS/Login.css">
+      <publishTime>11/10/2014 11:21:26</publishTime>
+    </File>
+    <File Include="CSS/Report.css">
+      <publishTime>06/07/2018 18:20:45</publishTime>
+    </File>
+    <File Include="CSS/Search.css">
+      <publishTime>03/16/2018 18:47:32</publishTime>
+    </File>
+    <File Include="Help/ProRadRS_Lite_Help.pdf">
+      <publishTime>07/02/2015 15:46:40</publishTime>
+    </File>
+    <File Include="img/btn_NO.png">
+      <publishTime>05/08/2015 19:48:34</publishTime>
+    </File>
+    <File Include="img/btn_yes.png">
+      <publishTime>05/08/2015 19:48:34</publishTime>
+    </File>
+    <File Include="img/logo.ico">
+      <publishTime>01/15/2013 11:36:36</publishTime>
+    </File>
+    <File Include="img/ProRadRSLiteﾛｸﾞｲﾝｱﾆﾒ.gif">
+      <publishTime>01/15/2013 11:36:24</publishTime>
+    </File>
+    <File Include="img/Report/C_両方.png">
+      <publishTime>03/12/2018 14:55:59</publishTime>
+    </File>
+    <File Include="img/Report/C_日付.png">
+      <publishTime>03/12/2018 14:53:57</publishTime>
+    </File>
+    <File Include="img/Report/C_診断.png">
+      <publishTime>03/12/2018 14:57:42</publishTime>
+    </File>
+    <File Include="img/Report/Viewer_off.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/Viewer_on.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/Viewer_over.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/キー画像_見出し.png">
+      <publishTime>01/10/2013 17:01:20</publishTime>
+    </File>
+    <File Include="img/Report/キー画像削除_disable.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/キー画像削除_off.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/キー画像削除_on.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/キー画像削除_over.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/キー画像取込_disable.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/キー画像取込_off.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/キー画像取込_on.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/キー画像取込_over.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/ヘッダーBG.png">
+      <publishTime>03/26/2015 15:46:00</publishTime>
+    </File>
+    <File Include="img/Report/一時保存_disable.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/一時保存_off.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/一時保存_on.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/一時保存_over.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/一覧へ戻る_off.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/一覧へ戻る_on.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/一覧へ戻る_over.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/依頼内容_見出し.png">
+      <publishTime>01/10/2013 17:02:46</publishTime>
+    </File>
+    <File Include="img/Report/依頼票_disable.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/依頼票_off.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/依頼票_on.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/依頼票_over.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/参照_off.png">
+      <publishTime>03/16/2015 13:33:02</publishTime>
+    </File>
+    <File Include="img/Report/参照_on.png">
+      <publishTime>03/16/2015 13:33:04</publishTime>
+    </File>
+    <File Include="img/Report/参照_over.png">
+      <publishTime>03/16/2015 13:33:04</publishTime>
+    </File>
+    <File Include="img/Report/変更履歴_disable.png">
+      <publishTime>03/12/2018 12:28:16</publishTime>
+    </File>
+    <File Include="img/Report/変更履歴_off.png">
+      <publishTime>03/16/2018 20:07:04</publishTime>
+    </File>
+    <File Include="img/Report/変更履歴_on.png">
+      <publishTime>03/12/2018 12:26:36</publishTime>
+    </File>
+    <File Include="img/Report/変更履歴_over.png">
+      <publishTime>03/12/2018 12:22:59</publishTime>
+    </File>
+    <File Include="img/Report/定型文_disable.png">
+      <publishTime>03/16/2018 20:29:28</publishTime>
+    </File>
+    <File Include="img/Report/定型文_off.png">
+      <publishTime>03/16/2018 20:27:48</publishTime>
+    </File>
+    <File Include="img/Report/定型文_on.png">
+      <publishTime>03/12/2018 12:34:13</publishTime>
+    </File>
+    <File Include="img/Report/定型文_over.png">
+      <publishTime>03/16/2018 20:15:05</publishTime>
+    </File>
+    <File Include="img/Report/左上情報BG.png">
+      <publishTime>01/10/2013 16:48:26</publishTime>
+    </File>
+    <File Include="img/Report/所見.png">
+      <publishTime>03/12/2018 15:00:37</publishTime>
+    </File>
+    <File Include="img/Report/最下段ボタン後ろBG.png">
+      <publishTime>01/10/2013 16:46:34</publishTime>
+    </File>
+    <File Include="img/Report/画像データ取得_off.png">
+      <publishTime>01/11/2013 15:42:00</publishTime>
+    </File>
+    <File Include="img/Report/画像データ取得_on.png">
+      <publishTime>01/10/2013 16:59:36</publishTime>
+    </File>
+    <File Include="img/Report/画像データ取得_over.png">
+      <publishTime>01/10/2013 17:00:20</publishTime>
+    </File>
+    <File Include="img/Report/画像所見_見出し.png">
+      <publishTime>01/10/2013 17:02:02</publishTime>
+    </File>
+    <File Include="img/Report/確定_disable.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/確定_off.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/確定_on.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/確定_over.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/診断_見出し.png">
+      <publishTime>01/10/2013 17:01:36</publishTime>
+    </File>
+    <File Include="img/Report/読影医師_見出し.png">
+      <publishTime>03/16/2015 13:34:52</publishTime>
+    </File>
+    <File Include="img/Report/読影取消_off.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/読影取消_on.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/読影取消_over.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/読影開始_off.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/読影開始_on.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/読影開始_over.png">
+      <publishTime>04/23/2015 09:38:14</publishTime>
+    </File>
+    <File Include="img/Report/連絡_見出し.png">
+      <publishTime>01/10/2013 17:02:20</publishTime>
+    </File>
+    <File Include="img/SearchHelp.png">
+      <publishTime>07/03/2015 15:09:40</publishTime>
+    </File>
+    <File Include="img/SearchHelpActive.png">
+      <publishTime>07/03/2015 15:09:40</publishTime>
+    </File>
+    <File Include="img/SearchHelpHover.png">
+      <publishTime>07/03/2015 15:09:40</publishTime>
+    </File>
+    <File Include="img/SearchMenuReset.png">
+      <publishTime>04/23/2015 09:33:16</publishTime>
+    </File>
+    <File Include="img/SearchMenuResetActive.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/SearchMenuResetHover.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/Viewer_off.png">
+      <publishTime>03/20/2015 09:20:14</publishTime>
+    </File>
+    <File Include="img/Viewer_on.png">
+      <publishTime>03/20/2015 09:20:14</publishTime>
+    </File>
+    <File Include="img/Viewer_over.png">
+      <publishTime>03/20/2015 09:20:14</publishTime>
+    </File>
+    <File Include="img/クリアボタン_off.png">
+      <publishTime>01/08/2013 13:30:38</publishTime>
+    </File>
+    <File Include="img/クリアボタン_on.png">
+      <publishTime>01/08/2013 13:30:24</publishTime>
+    </File>
+    <File Include="img/クリアボタン_over.png">
+      <publishTime>01/09/2013 16:26:18</publishTime>
+    </File>
+    <File Include="img/タイトルバーBG.png">
+      <publishTime>01/08/2013 13:58:30</publishTime>
+    </File>
+    <File Include="img/タイトルバー仕切り.png">
+      <publishTime>01/08/2013 13:59:36</publishTime>
+    </File>
+    <File Include="img/ヘッダーBG.png">
+      <publishTime>01/08/2013 14:07:28</publishTime>
+    </File>
+    <File Include="img/ログインボタン_non.png">
+      <publishTime>01/09/2013 16:26:14</publishTime>
+    </File>
+    <File Include="img/ログインボタン_off.png">
+      <publishTime>01/08/2013 13:28:30</publishTime>
+    </File>
+    <File Include="img/ログインボタン_on.png">
+      <publishTime>01/08/2013 13:28:14</publishTime>
+    </File>
+    <File Include="img/ログインボタン_over.png">
+      <publishTime>01/09/2013 16:26:20</publishTime>
+    </File>
+    <File Include="img/依頼_off.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/依頼_on.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/依頼_over.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/依頼_アイコン_off.png">
+      <publishTime>03/23/2015 13:07:48</publishTime>
+    </File>
+    <File Include="img/依頼_アイコン_on.png">
+      <publishTime>03/20/2015 09:20:14</publishTime>
+    </File>
+    <File Include="img/依頼_アイコン_over.png">
+      <publishTime>03/20/2015 09:49:18</publishTime>
+    </File>
+    <File Include="img/検査結果BG.png">
+      <publishTime>01/08/2013 13:51:40</publishTime>
+    </File>
+    <File Include="img/検索_off.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/検索_on.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/検索_over.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/画像データ取得_off.png">
+      <publishTime>01/08/2013 14:05:44</publishTime>
+    </File>
+    <File Include="img/画像データ取得_on.png">
+      <publishTime>01/08/2013 14:04:38</publishTime>
+    </File>
+    <File Include="img/画像データ取得_over.png">
+      <publishTime>01/10/2013 15:37:26</publishTime>
+    </File>
+    <File Include="img/画像確認_off.png">
+      <publishTime>09/03/2013 19:16:26</publishTime>
+    </File>
+    <File Include="img/画像確認_on.png">
+      <publishTime>09/03/2013 19:16:26</publishTime>
+    </File>
+    <File Include="img/画像確認_over.png">
+      <publishTime>09/03/2013 19:16:24</publishTime>
+    </File>
+    <File Include="img/緊急読影_off.png">
+      <publishTime>01/08/2013 13:55:50</publishTime>
+    </File>
+    <File Include="img/緊急読影_on.png">
+      <publishTime>01/08/2013 13:55:36</publishTime>
+    </File>
+    <File Include="img/緊急読影_over.png">
+      <publishTime>01/09/2013 16:26:06</publishTime>
+    </File>
+    <File Include="img/読影_off.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/読影_on.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/読影_over.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/読影予備_off.png">
+      <publishTime>11/20/2015 18:06:06</publishTime>
+    </File>
+    <File Include="img/読影予備_on.png">
+      <publishTime>11/20/2015 18:09:24</publishTime>
+    </File>
+    <File Include="img/読影予備_over.png">
+      <publishTime>11/20/2015 18:10:38</publishTime>
+    </File>
+    <File Include="img/読影済み_off.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/読影済み_on.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/読影済み_over.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/読影済み_アイコン_off.png">
+      <publishTime>03/23/2015 13:07:48</publishTime>
+    </File>
+    <File Include="img/読影済み_アイコン_on.png">
+      <publishTime>03/20/2015 09:20:22</publishTime>
+    </File>
+    <File Include="img/読影済み_アイコン_over.png">
+      <publishTime>03/20/2015 09:20:22</publishTime>
+    </File>
+    <File Include="img/閲覧.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/閲覧_on.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/閲覧_over.png">
+      <publishTime>04/23/2015 09:33:18</publishTime>
+    </File>
+    <File Include="img/閲覧予備_off.png">
+      <publishTime>11/20/2015 18:21:44</publishTime>
+    </File>
+    <File Include="img/閲覧予備_on.png">
+      <publishTime>11/20/2015 18:26:20</publishTime>
+    </File>
+    <File Include="img/閲覧予備_over.png">
+      <publishTime>11/20/2015 18:25:16</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>02/05/2018 13:06:12</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/images/animated-overlay.gif">
+      <publishTime>03/17/2015 17:54:16</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>03/17/2015 17:54:16</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>03/17/2015 17:54:16</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>03/17/2015 17:54:16</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>03/17/2015 17:54:16</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>03/17/2015 17:54:16</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>03/17/2015 17:54:16</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>03/17/2015 17:54:16</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>03/17/2015 17:54:16</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/images/ui-icons_222222_256x240.png">
+      <publishTime>03/17/2015 17:54:16</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>03/17/2015 17:54:16</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/images/ui-icons_454545_256x240.png">
+      <publishTime>03/17/2015 17:54:16</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/images/ui-icons_888888_256x240.png">
+      <publishTime>03/17/2015 17:54:16</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>03/17/2015 17:54:16</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/jquery-ui.css">
+      <publishTime>02/21/2018 11:10:24</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/jquery.ui.all.css">
+      <publishTime>03/17/2015 17:54:04</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/jquery.ui.base.css">
+      <publishTime>03/17/2015 17:54:04</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/jquery.ui.core.css">
+      <publishTime>03/17/2015 17:54:04</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/jquery.ui.datepicker.css">
+      <publishTime>03/17/2015 17:54:04</publishTime>
+    </File>
+    <File Include="Scripts/Core/css/jquery.ui.theme.css">
+      <publishTime>03/17/2015 17:54:04</publishTime>
+    </File>
+    <File Include="Scripts/Core/jquery-1.12.4.min.js">
+      <publishTime>07/08/2016 18:51:48</publishTime>
+    </File>
+    <File Include="Scripts/Core/jquery-1.7.2.js">
+      <publishTime>04/12/2012 19:59:50</publishTime>
+    </File>
+    <File Include="Scripts/Core/jquery-1.7.2.min.js">
+      <publishTime>04/12/2012 19:59:44</publishTime>
+    </File>
+    <File Include="Scripts/Core/jquery-ui.js">
+      <publishTime>05/08/2015 18:58:48</publishTime>
+    </File>
+    <File Include="Scripts/Core/jquery.ui.core.min.js">
+      <publishTime>03/17/2015 17:40:08</publishTime>
+    </File>
+    <File Include="Scripts/Core/jquery.ui.datepicker.min.js">
+      <publishTime>03/17/2015 17:40:08</publishTime>
+    </File>
+    <File Include="Scripts/Core/jquery.ui.widget.min.js">
+      <publishTime>03/17/2015 17:40:08</publishTime>
+    </File>
+    <File Include="Scripts/js/Add/bootstrap.js">
+      <publishTime>07/04/2017 16:16:14</publishTime>
+    </File>
+    <File Include="Scripts/js/common.js">
+      <publishTime>05/17/2018 18:11:05</publishTime>
+    </File>
+    <File Include="Scripts/js/login.js">
+      <publishTime>11/10/2014 11:21:26</publishTime>
+    </File>
+    <File Include="Scripts/js/report.js">
+      <publishTime>06/07/2018 18:22:28</publishTime>
+    </File>
+    <File Include="Scripts/js/search.js">
+      <publishTime>06/07/2018 18:07:17</publishTime>
+    </File>
+    <File Include="Scripts/js/test.js">
+      <publishTime>03/08/2018 11:18:00</publishTime>
+    </File>
+    <File Include="Scripts/js/viewerOpen.js">
+      <publishTime>03/25/2015 10:59:28</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.GetGroupListResponse.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.GetHistoryReportDataResponse.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.GetReportDataResponse.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.GetReportListConditionalResponse.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.GetReportListEmergencyResponse.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.GetReportListReadResponse.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.GetReportListResponse.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.GetReportViewResponse.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.GetServerConfigListResponse.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.GetUserListResponse.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.GroupMst.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.LoginResponse.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.ReportHistory.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.ReportView.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.ServerConfigMst.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/NetTcpBinding_ProRadiRSService/ProRadiRS.NetTcpBinding_ProRadiRSService.UserMst.datasource">
+      <publishTime>03/08/2018 11:58:24</publishTime>
+    </File>
+    <File Include="Service References/ProRadiRSService2/ProRadiRS.ProRadiRSService2.AutoLoginCheckResponse.datasource">
+      <publishTime>06/06/2018 18:52:44</publishTime>
+    </File>
+    <File Include="Service References/ProRadiRSService2/ProRadiRS.ProRadiRSService2.GetChangeHistoryResponse.datasource">
+      <publishTime>06/06/2018 18:52:44</publishTime>
+    </File>
+    <File Include="Service References/ProRadiRSService2/ProRadiRS.ProRadiRSService2.GetSentenceDataResponse.datasource">
+      <publishTime>06/06/2018 18:52:44</publishTime>
+    </File>
+    <File Include="Service References/ProRadiRSService2/ProRadiRS.ProRadiRSService2.UserMst2.datasource">
+      <publishTime>06/06/2018 18:52:44</publishTime>
+    </File>
+    <File Include="Upload.aspx">
+      <publishTime>02/01/2018 11:42:52</publishTime>
+    </File>
+    <File Include="Viewer.aspx">
+      <publishTime>02/05/2018 09:31:32</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/06/2018 19:02:10</publishTime>
+    </File>
+    <File Include="webExamOrder.aspx">
+      <publishTime>02/01/2018 11:45:16</publishTime>
+    </File>
+    <File Include="webImage.aspx">
+      <publishTime>02/01/2018 11:45:56</publishTime>
+    </File>
+    <File Include="webImageHistory.aspx">
+      <publishTime>02/02/2018 11:57:20</publishTime>
+    </File>
+    <File Include="webLogin.aspx">
+      <publishTime>03/16/2018 20:37:02</publishTime>
+    </File>
+    <File Include="webReport.aspx">
+      <publishTime>06/06/2018 16:10:52</publishTime>
+    </File>
+    <File Include="webSearch.aspx">
+      <publishTime>03/16/2018 20:37:21</publishTime>
+    </File>
+    <File Include="webTest.aspx">
+      <publishTime>03/08/2018 09:56:56</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
