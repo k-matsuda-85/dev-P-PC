@@ -10,6 +10,7 @@ public class ConfigUtil
     public static readonly string _LogPath = ConfigurationManager.AppSettings["LogPath"] ?? "";
 
     public static readonly string _ViewerUrl = ConfigurationManager.AppSettings["ViewerUrl"] ?? "";
+    public static readonly string _ViewerUrlVin = ConfigurationManager.AppSettings["ViewerUrl-Vin"] ?? "";
 
     public static readonly string _ViewerUrlKey = ConfigurationManager.AppSettings["ViewerUrlKey"] ?? "";
 

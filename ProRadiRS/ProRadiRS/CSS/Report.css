@@ -525,16 +525,46 @@ body
 }
 .btnViewer-off
 {
-    background:url(../img/Report/Viewer_off.png?20141110);
+    background:url(../img/Report/Viewer1_off.png?20141110);
 }
 .btnViewer-on
 {
-    background:url(../img/Report/Viewer_on.png?20141110);
+    background:url(../img/Report/Viewer1_on.png?20141110);
 }
 .btnViewer-over
 {
-    background:url(../img/Report/Viewer_over.png?20141110);
+    background:url(../img/Report/Viewer1_over.png?20141110);
 }
+
+/* Viewerボタン */
+#btnViewer2
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    outline:none;
+    cursor:pointer;
+    width:111px;
+    height:38px;
+    position:relative;
+    top: 10px;
+    left: 78px;
+}
+.btnViewer2-off
+{
+    background:url(../img/Report/Viewer2_off.png?20141110);
+}
+.btnViewer2-on
+{
+    background:url(../img/Report/Viewer2_on.png?20141110);
+}
+.btnViewer2-over
+{
+    background:url(../img/Report/Viewer2_over.png?20141110);
+}
+
 
 /* Viewerボタン 予備 */
 #btnViewer_Reserve
@@ -938,32 +968,42 @@ body
     cursor:pointer;
     position:relative;
     top: 0px;
-    margin-left:15px;
+    margin-left:8px;
     margin-top:2px;
 }
 
 #btnICopy{
     background:url(../img/Report/C_日付.png);
-    width:86px;
+    width:80px;
     background-size:100%;
+    background-repeat:no-repeat;
 }
 
 #btnFCopy{
     background:url(../img/Report/所見.png);
-    width:158px;
+    width:148px;
     background-size:100%;
+    background-repeat:no-repeat;
 }
 
 #btnDCopy{
     background:url(../img/Report/C_診断.png);
-    width:132px;
+    width:122px;
     background-size:100%;
+    background-repeat:no-repeat;
 }
 
 #btnFDCopy{
     background:url(../img/Report/C_両方.png);
-    width:157px;
+    width:147px;
     background-size:100%;
+    background-repeat:no-repeat;
+}
+#btnNonCopy{
+    background:url(../img/Report/C_参照なし.png);
+    width:80px;
+    background-size:100%;
+    background-repeat:no-repeat;
 }
 
 .modal-ex{
@@ -1235,4 +1275,16 @@ td.SetButton input{
     border-style:solid;
     border-color:#002060;
     background-color:rgba(222, 235, 247, 1);
+}
+
+.nomal-image{
+    border:ridge 3px black;
+}
+
+.alert-image{
+    border:ridge 5px red;
+}
+
+div.select-image{
+    border:ridge 3px deepskyblue;
 }

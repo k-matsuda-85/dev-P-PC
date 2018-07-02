@@ -4,6 +4,7 @@ var $ReportHistory;             // 検査暦オブジェクト
 var $SelectImage;               // 選択(クリック)画像オブジェクト
 
 var $ReportButtonViewer;        // Viewerボタン
+var $ReportButtonViewer2;        // Viewerボタン
 var $ReportButtonImage;         // キー画像取込ボタン
 var $ReportButtonImageDelete;   // キー画像削除ボタン
 var $ReportButtonSave;          // 確定ボタン
@@ -56,6 +57,7 @@ function ReportWindow_Init() {
     // オブジェクトキャッシュ
     $ReportConfig = $("#ReportConfig");
     $ReportButtonViewer = $("#btnViewer");
+    $ReportButtonViewer2 = $("#btnViewer2");
     $ReportButtonImage = $("#btnImage");
     $ReportButtonImageDelete = $("#btnImageDelete");
     $ReportButtonSave = $("#btnSave");
@@ -383,7 +385,7 @@ function ReportCenter_Init() {
     tblTag += "<td id=\"ReportRow5-Col\" class=\"ReportRow-Diagnosing\"><div id=\"ReportRow5-Caption\"></div></td>";
     tblTag += "<td class=\"ReportRow-Diagnosing\"><textarea id=\"TxtDiagnosing\" class=\"ReportRead\" tabindex=\"2\" rows=\"\" cols=\"\"></textarea></td>";
     tblTag += "<td class=\"ReportRow-Diagnosing\"></td>";
-    tblTag += "<td colspan=\"3\" class=\"ReportRow-Diagnosing\"><div><textarea id=\"TxtPastDiagnosing\" class=\"ReportRead\" readonly=\"readonly\" rows=\"\" cols=\"\"></textarea></div><div><input type='button' id='btnFCopy' class='SubButton' /><input type='button' id='btnDCopy' class='SubButton' /><input type='button' id='btnFDCopy' class='SubButton' /><input type='button' id='btnICopy' class='SubButton' /></div></td>";
+    tblTag += "<td colspan=\"3\" class=\"ReportRow-Diagnosing\"><div><textarea id=\"TxtPastDiagnosing\" class=\"ReportRead\" readonly=\"readonly\" rows=\"\" cols=\"\"></textarea></div><div><input type='button' id='btnFCopy' class='SubButton' /><input type='button' id='btnDCopy' class='SubButton' /><input type='button' id='btnFDCopy' class='SubButton' /><input type='button' id='btnICopy' class='SubButton' /><input type='button' id='btnNonCopy' class='SubButton'/></div></td>";
 //    tblTag += "<td colspan=\"3\" class=\"ReportRow-Diagnosing\"><textarea id=\"TxtPastDiagnosing\" class=\"ReportRead\" readonly=\"readonly\" rows=\"\" cols=\"\"></textarea></td>";
     tblTag += "<td id=\"ReportRow1-HeadCol3\"></td></tr>";
 
@@ -500,6 +502,11 @@ function ReportCenter_Init() {
         if (editFlg != 0)
             return;
         OpinionCopyDate();
+    });
+    $('#btnNonCopy').on('click', function () {
+        if (editFlg != 0)
+            return;
+        OpinionCopyNon();
     });
 
     $('#sent-cp').on('click', function () {
@@ -1064,7 +1071,7 @@ function Viewer() {
     prm.officecd = $ReportConfig.data("officecd");
 
     // common.js(WebViewer_Startメソッド呼び出し)
-    WebViewer_Start2(prm);
+    WebViewer2_Start(prm);
 }
 /* Viewerボタンマウスダウンイベント */
 function ViewerMouseDonw() {
@@ -1090,6 +1097,46 @@ function ViewerMouseOver() {
         $ReportButtonViewer.removeClass("btnViewer-off");
     }
 }
+/***************************************************
+/* VIEWER2ボタンイベント */
+function Viewer2() {
+
+    // 連想配列に起動引数追加
+    var prm = {};
+    prm.serialno = $ReportConfig.data("serialno");
+    prm.orderno = $ReportConfig.data("orderno");
+    prm.patientid = $ReportConfig.data("patientid");
+    prm.studydate = $ReportConfig.data("studydate");
+    prm.modality = $ReportConfig.data("modality");
+    prm.officecd = $ReportConfig.data("officecd");
+
+    // common.js(WebViewer_Startメソッド呼び出し)
+    WebViewer_Start2(prm);
+}
+/* Viewerボタンマウスダウンイベント */
+function ViewerMouseDonw2() {
+    if ($ReportButtonViewer2 != null && $ReportButtonViewer2 != undefined) {
+        $ReportButtonViewer2.addClass("btnViewer2-on");
+        $ReportButtonViewer2.removeClass("btnViewer2-off");
+        $ReportButtonViewer2.removeClass("btnViewer2-over");
+    }
+}
+/* Viewerボタンマウスアップイベント */
+function ViewerMouseUp2() {
+    if ($ReportButtonViewer2 != null && $ReportButtonViewer2 != undefined) {
+        $ReportButtonViewer2.addClass("btnViewer2-off");
+        $ReportButtonViewer2.removeClass("btnViewer2-on");
+        $ReportButtonViewer2.removeClass("btnViewer2-over");
+    }
+}
+/* Viewerボタンマウスオーバーイベント */
+function ViewerMouseOver2() {
+    if ($ReportButtonViewer2 != null && $ReportButtonViewer2 != undefined) {
+        $ReportButtonViewer2.addClass("btnViewer2-over");
+        $ReportButtonViewer2.removeClass("btnViewer2-on");
+        $ReportButtonViewer2.removeClass("btnViewer2-off");
+    }
+}
 
 /***************************************************
 /* 画像取込ボタンイベント */
@@ -1108,18 +1155,19 @@ function Image() {
 function C_Image() {
     var serialNo = $ReportConfig.data("serialno");
     var imageNum = $("#ReportImages").children().length;
+    var search = $ReportConfig.data("patientid") + '_' + $ReportConfig.data("studydate") + '_' + $ReportConfig.data("modality");
 
     // 画像取り込み開始
-    C_Image_Import(serialNo, imageNum);
+    C_Image_Import(serialNo, imageNum, search);
 }
-function Image_Import(prm, imageNum) {
+function Image_Import(prm, imageNum, search) {
     // HTTP通信開始
     $.ajax({
         async: false,
         cache: false,
         type: "POST",
         url: "./CommonWebService.asmx/GetImageList",
-        data: "{serialNo:\"" + prm + "\",imageNum:\"" + imageNum + "\"}",
+        data: "{serialNo:\"" + prm + "\",imageNum:\"" + imageNum + "\",search:\"" + search + "\"}",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: Image_Import_Result,
@@ -1129,7 +1177,7 @@ function Image_Import(prm, imageNum) {
         }
     });
 }
-function C_Image_Import(prm, imageNum)
+function C_Image_Import(prm, imageNum, search)
 {
     // HTTP通信開始
     $.ajax({
@@ -1137,7 +1185,7 @@ function C_Image_Import(prm, imageNum)
         cache: false,
         type: "POST",
         url: "./CommonWebService.asmx/GetImageList",
-        data: "{serialNo:\"" + prm + "\",imageNum:\"" + imageNum + "\"}",
+        data: "{serialNo:\"" + prm + "\",imageNum:\"" + imageNum + "\",search:\"" + search + "\"}",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: C_Image_Import_Result,
@@ -1214,6 +1262,14 @@ function C_Image_Import_Result(result) {
     });
 }
 
+function CheckTargetImage(file)
+{
+    if (file.indexOf('alert') >= 0)
+        return false;
+
+    return true;
+}
+
 /***************************************************
 /* 引数オブジェクトに画像(div)追加 */
 function AddImage(list, obj, callImagePage, isImportImage, isClickEvent, isDblClickEvent, isKeyUpEvent) {
@@ -1237,7 +1293,18 @@ function AddImage(list, obj, callImagePage, isImportImage, isClickEvent, isDblCl
         //row.data("isImportImage", isImportImage);
         row.css("background-image", "url(./" + callImagePage + "?key=" + list[i] + ")");
         row.css("background-color", "white");
-        row.css("border", "ridge 3px black");
+
+        if (!CheckTargetImage(list[i])){
+            if (!confirm('別検査の画像です。キー画像として登録しますか？'))
+                return;
+
+            row.addClass('alert-image');
+            row.attr('title', '別検査画像');
+        }
+        else 
+            row.addClass('nomal-image');
+
+//        row.css("border", "ridge 3px black");
 
         // ドラッグアンドドロップ対応IE10以上)draggable
         row.attr("draggable", true);
@@ -1661,11 +1728,11 @@ function ImageSelect(selectObj) {
     if ($SelectImage != null && $SelectImage != undefined) {
         // 現在の選択中オブジェクトの表示を変更
         //$SelectImage.css("border", "ridge 3px black");
-        $SelectImage.children(".KeyImage-Item").css("border", "ridge 3px black");
+        $SelectImage.children(".KeyImage-Item").removeClass("select-image");
     }
     // 新しい選択オブジェクトの表示を変更
     //selectObj.css("border", "ridge 3px deepskyblue");
-    selectObj.children(".KeyImage-Item").css("border", "ridge 3px deepskyblue");
+    selectObj.children(".KeyImage-Item").addClass("select-image");
 
     // 選択中オブジェクト変数に新しい選択オブジェクトを格納
     $SelectImage = selectObj;
@@ -2693,6 +2760,21 @@ function OpinionCopyDate() {
     var Finding = Escape($("#TxtFinding").val());
 
     var history = "\r\n" + data.HisStudyDateTime + " の " + data.HisModality + " と比較しました。";
+
+    // 定型文情報
+    var temp = Finding + Escape(history);
+
+    $("#TxtFinding").val(temp);
+}
+
+/***************************************************
+/* 参照なし ボタンイベント */
+function OpinionCopyNon() {
+
+    // 所見
+    var Finding = Escape($("#TxtFinding").val());
+
+    var history = "比較対象となる過去画像（レポート）はありません。";
 
     // 定型文情報
     var temp = Finding + Escape(history);

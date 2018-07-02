@@ -105,8 +105,15 @@
     <Content Include="img\logo.ico" />
     <Content Include="img\ProRadRSLiteﾛｸﾞｲﾝｱﾆﾒ.gif" />
     <Content Include="img\Report\C_両方.png" />
+    <Content Include="img\Report\C_参照なし.png" />
     <Content Include="img\Report\C_日付.png" />
     <Content Include="img\Report\C_診断.png" />
+    <Content Include="img\Report\Viewer1_off.png" />
+    <Content Include="img\Report\Viewer1_on.png" />
+    <Content Include="img\Report\Viewer1_over.png" />
+    <Content Include="img\Report\Viewer2_off.png" />
+    <Content Include="img\Report\Viewer2_on.png" />
+    <Content Include="img\Report\Viewer2_over.png" />
     <Content Include="img\Report\Viewer_off.png" />
     <Content Include="img\Report\Viewer_on.png" />
     <Content Include="img\Report\Viewer_over.png" />

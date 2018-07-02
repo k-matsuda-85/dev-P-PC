@@ -195,6 +195,40 @@ function WebViewer_Start(prm,viewReserveflg) {
         }
     });
 }
+function WebViewer_Start(prm, viewReserveflg) {
+    // HTTP通信
+    $.ajax({
+        async: false,
+        cache: false,
+        type: "POST",
+        url: "./CommonWebService.asmx/GetViewerUrl",
+        data: "{serialno:\"" + prm.serialno + "\",orderno:\"" + prm.orderno + "\",patientid:\"" + prm.patientid + "\",studydate:\"" + prm.studydate + "\",modality:\"" + prm.modality + "\",viewReservflg:\"" + viewReserveflg + "\"}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: WebViewer_Start_Result,
+        error: function (result) {
+            // エラー
+            alert("通信エラーが発生しました。");
+        }
+    });
+}
+function WebViewer2_Start(prm, viewReserveflg) {
+    // HTTP通信
+    $.ajax({
+        async: false,
+        cache: false,
+        type: "POST",
+        url: "./CommonWebService.asmx/GetViewerUrl2",
+        data: "{serialno:\"" + prm.serialno + "\",orderno:\"" + prm.orderno + "\",patientid:\"" + prm.patientid + "\",studydate:\"" + prm.studydate + "\",modality:\"" + prm.modality + "\",viewReservflg:\"" + 0 + "\"}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: WebViewer_Start_Result,
+        error: function (result) {
+            // エラー
+            alert("通信エラーが発生しました。");
+        }
+    });
+}
 function WebViewer_Start_Result(result) {
     // エラー判定
     if (result.d == null || result.d.Result == "Error") {
@@ -210,9 +244,7 @@ function WebViewer_Start_Result(result) {
         //    if (viewerWindow.closed) {
         //        try {
         //            // IEの場合、子ウィンドウが制御できない場合があるため強制的に空ページを開き、閉じる
-        //            if (viewerWindow.opener) {
-        //                window.open("", "ProRadiRS_Nadia").close();
-        //            }
+        //            window.open("", "ProMedViewer").close();
         //        }
         //        catch (e) { }
         //    }
@@ -223,12 +255,14 @@ function WebViewer_Start_Result(result) {
 
         var viewerWindowName;
         if (viewReserveflg == 0) {
-            viewerWindowName = "ProRadiRS_Nadia";
+            viewerWindowName = "ProMedViewer";
         } else {
-            viewerWindowName = "ProRadiRS_Nadia_reserve";
+            viewerWindowName = "ProMedViewer_reserve";
         }
 
         //viewerWindow = window.open(result.d.ViewerURL, "ProRadiRS_Nadia");
+        //viewerWindow = window.open("", viewerWindowName);
+        //viewerWindow.location = result.d.ViewerURL;
         viewerWindow = window.open(result.d.ViewerURL, viewerWindowName);
         
     }

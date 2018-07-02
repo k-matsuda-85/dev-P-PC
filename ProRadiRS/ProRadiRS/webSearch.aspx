@@ -14,7 +14,7 @@
     <!-- スクリプト -->
     <script src="./Scripts/Core/jquery-1.7.2.js" type="text/javascript"></script>
     <script src="./Scripts/Core/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script src="./Scripts/js/common.js?20151124" type="text/javascript"></script>
+    <script src="./Scripts/js/common.js?20180621" type="text/javascript"></script>
     <script src="./Scripts/js/search.js?20160215" type="text/javascript"></script>
     <script src="./Scripts/Core/jquery.ui.core.min.js?20151124" type="text/javascript"></script>
     <script src="./Scripts/Core/jquery.ui.widget.min.js?20151124" type="text/javascript"></script>

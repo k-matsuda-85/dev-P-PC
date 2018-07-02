@@ -47,6 +47,11 @@ namespace ProRadiRS
         {
             return CommonWebServiceProc.GetViewerUrl(serialno, orderno, patientid, studydate, modality, viewReservflg);
         }
+        [WebMethod(EnableSession = true)]
+        public WebViewer GetViewerUrl2(int serialno, string orderno, string patientid, string studydate, string modality, int viewReservflg)
+        {
+            return CommonWebServiceProc.GetViewerUrl2(serialno, orderno, patientid, studydate, modality, viewReservflg);
+        }
 
         [WebMethod(EnableSession = true)]
         public WebResult ReadingCheck()
@@ -103,9 +108,9 @@ namespace ProRadiRS
         }
 
         [WebMethod(EnableSession = true)]
-        public WebImageList GetImageList(int serialNo, int imageNum)
+        public WebImageList GetImageList(int serialNo, int imageNum, string search)
         {
-            return CommonWebServiceProc.GetImageList(serialNo, imageNum);
+            return CommonWebServiceProc.GetImageList(serialNo, imageNum, search);
         }
 
         [WebMethod(EnableSession = true)]

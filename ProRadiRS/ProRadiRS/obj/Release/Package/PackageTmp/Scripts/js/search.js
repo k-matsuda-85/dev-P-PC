@@ -1245,7 +1245,7 @@ function ViewerWindow_Open(id) {
     prm.officecd = report._OfficeCd;
 
     // common.js(メソッド呼び出し)
-    WebViewer_Start(prm, ViewReserveFlg);
+    WebViewer2_Start(prm, ViewReserveFlg);
 
 }
 ///* 閲覧ボタンマウスダウンイベント */

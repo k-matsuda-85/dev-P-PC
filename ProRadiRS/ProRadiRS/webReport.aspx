@@ -60,26 +60,27 @@
     </table>
     </div>
     <div id="ReportBottom">
-      <input type="button" class="btnReadCancel-off" id="btnReadCancel"  tabindex="10" onclick="ReadCancel()" onmousedown="ReadCancelMouseDonw()" onmouseup="ReadCancelMouseUp()" onmouseout="ReadCancelMouseUp()" onmouseover="ReadCancelMouseOver()"/>
-      <input type="button" class="btnReadStart-off" id="btnReadStart"  tabindex="10" onclick="ReadStart()" onmousedown="ReadStartMouseDonw()" onmouseup="ReadStartMouseUp()" onmouseout="ReadStartMouseUp()" onmouseover="ReadStartMouseOver()" style ="display:none"/>
+      <input type="button" class="btnReadCancel-off" id="btnReadCancel"  tabindex="0" onclick="ReadCancel()" onmousedown="ReadCancelMouseDonw()" onmouseup="ReadCancelMouseUp()" onmouseout="ReadCancelMouseUp()" onmouseover="ReadCancelMouseOver()"/>
+      <input type="button" class="btnReadStart-off" id="btnReadStart"  tabindex="1" onclick="ReadStart()" onmousedown="ReadStartMouseDonw()" onmouseup="ReadStartMouseUp()" onmouseout="ReadStartMouseUp()" onmouseover="ReadStartMouseOver()" style ="display:none"/>
 
       <input type="button" class="btnSentence-off" id="btnSentence" tabindex="2" data-toggle="modal" onmousedown="SentenceMouseDonw()" onmouseup="SentenceMouseUp()" onmouseout="SentenceMouseUp()" onmouseover="SentenceMouseOver()" data-target="#modal" data-backdrop="false" />
 
       <input type="button" class="btnExamOrder-off" id="btnExamOrder" tabindex="3" onclick="ExamOrder()" onmousedown="ExamOrderMouseDonw()" onmouseup="ExamOrderMouseUp()" onmouseout="ExamOrderMouseUp()" onmouseover="ExamOrderMouseOver()" />
-      <input type="button" class="btnViewer-off" id="btnViewer" tabindex="4" onclick="Viewer()" onmousedown="ViewerMouseDonw()" onmouseup="ViewerMouseUp()" onmouseout="ViewerMouseUp()" onmouseover="ViewerMouseOver()"/>
-      <input type="button" class="btnImage-off" id="btnImage" tabindex="5" onclick="Image()" onmousedown="ImageMouseDonw()" onmouseup="ImageMouseUp()" onmouseout="ImageMouseUp()" onmouseover="ImageMouseOver()"/>
+      <input type="button" class="btnViewer-off" id="btnViewer" tabindex="4" onclick="Viewer()" onmousedown="ViewerMouseDonw()" onmouseup="ViewerMouseUp()" onmouseout="ViewerMouseUp()" onmouseover="ViewerMouseOver()" title="New Viewer"/>
+      <input type="button" class="btnViewer2-off" id="btnViewer2" tabindex="5" onclick="Viewer2()" onmousedown="ViewerMouseDonw2()" onmouseup="ViewerMouseUp2()" onmouseout="ViewerMouseUp2()" onmouseover="ViewerMouseOver2()"title="Sub Viewer"/>
+      <input type="button" class="btnImage-off" id="btnImage" tabindex="6" onclick="Image()" onmousedown="ImageMouseDonw()" onmouseup="ImageMouseUp()" onmouseout="ImageMouseUp()" onmouseover="ImageMouseOver()"/>
      <!-- <input type="button" id="btnclipboard"  tabindex="11" onclick="clipboard()" value="クリップボード取込" style ="display:none" />-->
      <!-- <input type="button" id="btnclipboardCancel"  tabindex="11" onclick="clipboardCancel()" value="取込キャンセル" style ="display:none" />-->
 
-      <input type="button" class="btnImageDelete-off" id="btnImageDelete" tabindex="6" onclick="Delete()" onmousedown="ImageDeleteMouseDonw()" onmouseup="ImageDeleteMouseUp()" onmouseout="ImageDeleteMouseUp()" onmouseover="ImageDeleteMouseOver()"/>
+      <input type="button" class="btnImageDelete-off" id="btnImageDelete" tabindex="7" onclick="Delete()" onmousedown="ImageDeleteMouseDonw()" onmouseup="ImageDeleteMouseUp()" onmouseout="ImageDeleteMouseUp()" onmouseover="ImageDeleteMouseOver()"/>
 
       <%--<input type="button" class="btnHistory-off" id="btnHistory" tabindex="6" onclick="History()" onmousedown="HistoryMouseDonw()" onmouseup="HistoryMouseUp()" onmouseout="HistoryMouseUp()" onmouseover="HistoryMouseOver()"/>--%>&nbsp;
 
-      <input type="button" class="btnEditHist-off" id="btnEditHist" tabindex="7" onclick="ChangeHistory2()" onmousedown="EditHistMouseDonw()" onmouseup="EditHistMouseUp()" onmouseout="EditHistMouseUp()" onmouseover="EditHistMouseOver()"/>&nbsp;
+      <input type="button" class="btnEditHist-off" id="btnEditHist" tabindex="8" onclick="ChangeHistory2()" onmousedown="EditHistMouseDonw()" onmouseup="EditHistMouseUp()" onmouseout="EditHistMouseUp()" onmouseover="EditHistMouseOver()"/>&nbsp;
 
-      <input type="button" class="btnSave-off" id="btnSave" tabindex="8" onclick="Save()" onmousedown="SaveMouseDonw()" onmouseup="SaveMouseUp()" onmouseout="SaveMouseUp()" onmouseover="SaveMouseOver()"/>&nbsp;
-      <input type="button" class="btnTempSave-off" id="btnTempSave"  tabindex="9" onclick="TempSave()" onmousedown="TempSaveMouseDonw()" onmouseup="TempSaveMouseUp()" onmouseout="TempSaveMouseUp()" onmouseover="TempSaveMouseOver()"/>
-      <input type="button" class="btnReturnList-off" id="btnReturnList"  tabindex="10" onclick="Return()" onmousedown="ReturnListMouseDonw()" onmouseup="ReturnListMouseUp()" onmouseout="ReturnListMouseUp()" onmouseover="ReturnListMouseOver()"/>
+      <input type="button" class="btnSave-off" id="btnSave" tabindex="9" onclick="Save()" onmousedown="SaveMouseDonw()" onmouseup="SaveMouseUp()" onmouseout="SaveMouseUp()" onmouseover="SaveMouseOver()"/>&nbsp;
+      <input type="button" class="btnTempSave-off" id="btnTempSave"  tabindex="10" onclick="TempSave()" onmousedown="TempSaveMouseDonw()" onmouseup="TempSaveMouseUp()" onmouseout="TempSaveMouseUp()" onmouseover="TempSaveMouseOver()"/>
+      <input type="button" class="btnReturnList-off" id="btnReturnList"  tabindex="11" onclick="Return()" onmousedown="ReturnListMouseDonw()" onmouseup="ReturnListMouseUp()" onmouseout="ReturnListMouseUp()" onmouseover="ReturnListMouseOver()"/>
         <input type="button" class="btnViewer_Reserve-off" id="btnViewer_Reserve" tabindex="12" onclick="Viewer_Reserve()" onmousedown="ViewerMouseDonw()" onmouseup="ViewerMouseUp()" onmouseout="ViewerMouseUp()" onmouseover="ViewerMouseOver()"/>
        <br />
 <%--    <button onclick="OpinionCopyFinding()">「画像所見」コピー</button>

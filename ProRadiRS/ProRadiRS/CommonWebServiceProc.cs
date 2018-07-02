@@ -5,6 +5,8 @@ using ProRadiRS.ProRadiRSService2;
 using ProRadServiceLib;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.ServiceModel;
 using System.Text;
@@ -743,7 +745,7 @@ public class CommonWebServiceProc
 		}
 	}
 
-	public static WebImageList GetImageList(int serialNo, int imageNum)
+	public static WebImageList GetImageList(int serialNo, int imageNum, string search)
 	{
 		try
 		{
@@ -772,7 +774,10 @@ public class CommonWebServiceProc
 				}
 				string searchPattern = Path.ChangeExtension(serialNo.ToString() + "*", ConfigUtil._ImageExt);
 				string[] fileSystemEntries = Directory.GetFileSystemEntries(text, searchPattern, SearchOption.TopDirectoryOnly);
-				List<string> list2 = new List<string>();
+                if(fileSystemEntries.Length == 0)
+                    fileSystemEntries = Directory.GetFileSystemEntries(text, "*.png", SearchOption.TopDirectoryOnly);
+
+                List<string> list2 = new List<string>();
 				string text2 = Path.Combine(ConfigUtil._ImageViewPath, num.ToString());
 				if (!Directory.Exists(text2))
 				{
@@ -792,21 +797,40 @@ public class CommonWebServiceProc
                         FileInfo finfo = new FileInfo(text3);
                         if (finfo.Length == 0)
                             continue;
+                        if(Path.GetExtension(text3) == ".png")
+                        {
+                            using (Bitmap img = new Bitmap(text3))
+                            {
+                                string text4 = Path.Combine(text2, Path.GetFileNameWithoutExtension(text3));
 
-						try
-						{
-							string text4 = Path.Combine(text2, Path.GetFileName(text3));
-							File.Copy(text3, text4, true);
-							if (File.Exists(text4))
-							{
-								File.Delete(text3);
-							}
-						}
-						catch
-						{
-						}
-						list2.Add(Path.GetFileNameWithoutExtension(text3));
-						num3++;
+                                if (text4.IndexOf(search) < 0)
+                                    text4 += "_alert";
+
+                                text4 += ".jpg";
+
+                                img.Save(text4, ImageFormat.Jpeg);
+                                list2.Add(Path.GetFileNameWithoutExtension(text4));
+                            }
+
+                            File.Delete(text3);
+                        }
+                        else
+                        {
+                            try
+                            {
+                                string text4 = Path.Combine(text2, Path.GetFileName(text3));
+                                File.Copy(text3, text4, true);
+                                if (File.Exists(text4))
+                                {
+                                    File.Delete(text3);
+                                }
+                            }
+                            catch
+                            {
+                            }
+                            list2.Add(Path.GetFileNameWithoutExtension(text3));
+                        }
+                        num3++;
 					}
 				}
 				WebImageList webImageList3 = new WebImageList();
@@ -2000,6 +2024,100 @@ public class CommonWebServiceProc
                 rSKey.Modality = modality;
                 param.Add(ConvertUtil.Serialize(rSKey));
 
+
+                string CallUrl = GetWebUrl(urlkey, text, param);
+                if (CallUrl.Length > 0)
+                {
+                    LogUtil.Write(LogUtil.LogType.Information, "CommonWebServiceProc", "GetViewerUrl", "ViewerURL [" + CallUrl + "]");
+                    WebViewer webViewer3 = new WebViewer();
+                    webViewer3.Result = "Success";
+                    webViewer3.ViewerURL = CallUrl.ToString();
+                    return webViewer3;
+                }
+                LogUtil.Write(LogUtil.LogType.Information, "CommonWebServiceProc", "GetViewerUrl", "CallUrlが取得出来ませんでした。Nadiaサ\u30fcビスのログを確認して下さい。");
+                WebViewer webViewer4 = new WebViewer();
+                webViewer4.Result = "Error";
+                webViewer4.ViewerURL = "";
+                return webViewer4;
+            }
+            LogUtil.Write(LogUtil.LogType.Error, "CommonWebServiceProc", "GetViewerUrl", "セッションからのユ\u30fcザ\u30fcコ\u30fcドが取得出来ない。");
+            WebViewer webViewer5 = new WebViewer();
+            webViewer5.Result = "Error";
+            webViewer5.Message = "NoSession";
+            return webViewer5;
+        }
+        catch (Exception ex)
+        {
+            LogUtil.Write(LogUtil.LogType.Error, "CommonWebServiceProc", "GetViewerUrl", ex.ToString());
+            WebViewer webViewer6 = new WebViewer();
+            webViewer6.Result = "Error";
+            webViewer6.Message = "Exception";
+            return webViewer6;
+        }
+    }
+    public static WebViewer GetViewerUrl2(int serialno, string orderno, string patientid, string studydate, string modality, int ViewReservflg)
+    {
+        //ProRadServicesClient proRadServicesClient = null;
+        try
+        {
+            HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            string text = ConfigUtil._ViewerUrlVin;
+            if (ViewReservflg == 1)
+            {
+                text = ConfigUtil._ViewerUrl_reserve;
+            }
+            if (text.Length == 0)
+            {
+                LogUtil.Write(LogUtil.LogType.Information, "CommonWebServiceProc", "GetViewerUrl", "Web.config[ViewerUrl]設定なし");
+                WebViewer webViewer = new WebViewer();
+                webViewer.Result = "Success";
+                webViewer.ViewerURL = "";
+                return webViewer;
+            }
+
+            string urlkey = ConfigUtil._ViewerUrlKey;
+            if (urlkey.Length == 0)
+            {
+                LogUtil.Write(LogUtil.LogType.Information, "CommonWebServiceProc", "GetViewerUrl", "Web.config[ViewerUrlKey]設定なし");
+                WebViewer webViewer = new WebViewer();
+                webViewer.Result = "Success";
+                webViewer.ViewerURL = "";
+                return webViewer;
+            }
+
+            if (HttpContext.Current.Session["usercd"] != null)
+            {
+                int num = (int)HttpContext.Current.Session["usercd"];
+                LogUtil.Write(LogUtil.LogType.Debug, "CommonWebServiceProc", "GetViewerUrl", "START [" + num.ToString() + "]");
+                orderno = "";
+                StringBuilder stringBuilder = new StringBuilder();
+                stringBuilder.AppendFormat("ユ\u30fcザ\u30fcCD[{0}] ", num);
+                stringBuilder.AppendFormat("シリアル番号[{0}] ", serialno);
+                stringBuilder.AppendFormat("患者ID[{0}] ", patientid);
+                stringBuilder.AppendFormat("検査日[{0}] ", studydate);
+                stringBuilder.AppendFormat("モダリティ[{0}] ", modality);
+                LogUtil.Write(LogUtil.LogType.Information, "CommonWebServiceProc", "GetViewerUrl", stringBuilder.ToString());
+                if (serialno == 0)
+                {
+                    LogUtil.Write(LogUtil.LogType.Warning, "CommonWebServiceProc", "GetViewerUrl", "シリアル番号が0。");
+                }
+                if (patientid.Length == 0)
+                {
+                    LogUtil.Write(LogUtil.LogType.Error, "CommonWebServiceProc", "GetViewerUrl", "患者IDが不明。");
+                    WebViewer webViewer2 = new WebViewer();
+                    webViewer2.Result = "Error";
+                    webViewer2.Message = "患者ID";
+                    return webViewer2;
+                }
+
+                List<string> param = new List<string>();
+                param.Add(serialno.ToString());
+                param.Add(orderno);
+                param.Add(patientid);
+                param.Add(studydate);
+                param.Add(modality);
+                param.Add("");
+                param.Add(num.ToString());
 
                 string CallUrl = GetWebUrl(urlkey, text, param);
                 if (CallUrl.Length > 0)
