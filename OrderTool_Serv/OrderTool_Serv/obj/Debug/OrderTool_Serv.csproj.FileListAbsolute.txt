@@ -1,0 +1,9 @@
+C:\開発\OrderTool_Serv\OrderTool_Serv\bin\Debug\OrderTool_Serv.dll
+C:\開発\OrderTool_Serv\OrderTool_Serv\bin\Debug\OrderTool_Serv.pdb
+C:\開発\OrderTool_Serv\OrderTool_Serv\bin\Debug\LogController.dll
+C:\開発\OrderTool_Serv\OrderTool_Serv\bin\Debug\Mono.Security.dll
+C:\開発\OrderTool_Serv\OrderTool_Serv\bin\Debug\MyAccDB.dll
+C:\開発\OrderTool_Serv\OrderTool_Serv\bin\Debug\Npgsql.dll
+C:\開発\OrderTool_Serv\OrderTool_Serv\obj\Debug\OrderTool_Serv.dll
+C:\開発\OrderTool_Serv\OrderTool_Serv\obj\Debug\OrderTool_Serv.pdb
+C:\開発\OrderTool_Serv\OrderTool_Serv\obj\Debug\OrderTool_Serv.csprojResolveAssemblyReference.cache

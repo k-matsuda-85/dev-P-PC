@@ -1,0 +1,15 @@
+C:\開発\OrderTool_Serv\test\bin\Debug\test.exe.config
+C:\開発\OrderTool_Serv\test\bin\Debug\test.exe
+C:\開発\OrderTool_Serv\test\bin\Debug\test.pdb
+C:\開発\OrderTool_Serv\test\bin\Debug\LogController.dll
+C:\開発\OrderTool_Serv\test\bin\Debug\Mono.Security.dll
+C:\開発\OrderTool_Serv\test\bin\Debug\MyAccDB.dll
+C:\開発\OrderTool_Serv\test\bin\Debug\Npgsql.dll
+C:\開発\OrderTool_Serv\test\bin\Debug\OrderTool_Serv.dll
+C:\開発\OrderTool_Serv\test\bin\Debug\OrderTool_Serv.pdb
+C:\開発\OrderTool_Serv\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+C:\開発\OrderTool_Serv\test\obj\Debug\test.Form1.resources
+C:\開発\OrderTool_Serv\test\obj\Debug\test.Properties.Resources.resources
+C:\開発\OrderTool_Serv\test\obj\Debug\test.csproj.GenerateResource.Cache
+C:\開発\OrderTool_Serv\test\obj\Debug\test.exe
+C:\開発\OrderTool_Serv\test\obj\Debug\test.pdb

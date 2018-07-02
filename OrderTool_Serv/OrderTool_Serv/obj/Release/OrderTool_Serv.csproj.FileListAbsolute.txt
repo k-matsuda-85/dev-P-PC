@@ -1,0 +1,8 @@
+C:\開発\OrderTool_Serv\OrderTool_Serv\bin\Release\OrderTool_Serv.dll
+C:\開発\OrderTool_Serv\OrderTool_Serv\bin\Release\OrderTool_Serv.pdb
+C:\開発\OrderTool_Serv\OrderTool_Serv\bin\Release\LogController.dll
+C:\開発\OrderTool_Serv\OrderTool_Serv\bin\Release\Mono.Security.dll
+C:\開発\OrderTool_Serv\OrderTool_Serv\bin\Release\MyAccDB.dll
+C:\開発\OrderTool_Serv\OrderTool_Serv\bin\Release\Npgsql.dll
+C:\開発\OrderTool_Serv\OrderTool_Serv\obj\Release\OrderTool_Serv.dll
+C:\開発\OrderTool_Serv\OrderTool_Serv\obj\Release\OrderTool_Serv.pdb

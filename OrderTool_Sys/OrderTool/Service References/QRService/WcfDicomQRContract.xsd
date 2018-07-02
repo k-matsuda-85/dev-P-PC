@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfDicomQRItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DicomQRItem" nillable="true" type="tns:DicomQRItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDicomQRItem" nillable="true" type="tns:ArrayOfDicomQRItem" />
+  <xs:complexType name="DicomQRItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NodeName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Tags" nillable="true" type="q1:ArrayOfKeyValueOfunsignedIntstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DicomQRItem" nillable="true" type="tns:DicomQRItem" />
+  <xs:complexType name="DicomQRNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArtimTimeout" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="MaxPDULen" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="MovetoAETitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QSCPAETitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QSCPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QSCUAETitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiveTimeout" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="SendTimeout" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="ServicePort" type="xs:unsignedShort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DicomQRNode" nillable="true" type="tns:DicomQRNode" />
+</xs:schema>

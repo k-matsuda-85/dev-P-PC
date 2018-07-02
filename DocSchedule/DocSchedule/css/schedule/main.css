@@ -1,0 +1,709 @@
+﻿body {
+    min-width:1024px;
+}
+
+.left,
+.left input,
+.left span {
+    float:left;
+}
+
+#title{
+    background-image:url('../../img/schedule/Title.png');
+    background-size:cover;
+    width:130px;
+}
+.mail{
+    background-image:url('../../img/schedule/Mail.png');
+    background-size:contain;
+    width:50px;
+    height:50px;
+    background-repeat:no-repeat;
+}
+.memo{
+    background-image:url('../../img/schedule/Memo.png');
+    background-size:contain;
+    width:50px;
+    height:50px;
+    background-repeat:no-repeat;
+}
+
+#doctor{
+    background-image:url('../../img/schedule/Dr.png');
+    background-size:contain;
+    width:50px;
+    height:50px;
+    background-repeat:no-repeat;
+}
+
+#mast-title{
+    width:450px;
+    float:left;
+}
+
+#mail-doc{;
+    margin-top:-10px;
+    width:50px;
+    height:50px;
+    float:left;
+}
+
+.t-time-a{
+    width:15px;
+    border-left:dotted;
+    border-width:1px;
+    height:20px;
+}
+.t-time-b,
+.t-time-c,
+.t-time-d
+{
+    width:15px;
+    height:20px;
+}
+.t-time{
+    width:60px;
+    border-left:dotted;
+    border-width:1px;
+}
+.t-time-sp{
+    width:30px;
+    /*border-left:dotted;
+    border-width:1px;*/
+}
+div.t-time-sp {
+    height:20px;
+}
+div.t-time-sp2 {
+    height:20px;
+    width:30px;
+}
+div.t-time-sp3{
+    width:75px;
+    height:20px;
+}
+.t-date{
+    width:60px;
+}
+.t-holiday{
+    border-left-style:solid;
+    border-width:1px;
+    text-align:center;
+    /*width:calc(100% - 1287px);*/
+}
+.t-holiday-body{
+    border-left-style:solid;
+    border-width:0.5px;
+    text-align:center;
+}
+div.t-holiday {
+    height:60px;
+}
+.t-place{
+    width:30px;
+    border-left-style:solid;
+    border-width:1px;
+    text-align:center;
+}
+.t-place-body{
+    width:30px;
+    border-left-style:solid;
+    border-width:0.5px;
+    text-align:center;
+}
+.t-allday{
+    width:0px;
+    border-left-style:solid;
+    border-right-style:solid;
+    border-width:1px;
+    text-align:center;
+}
+.t-allday-body{
+    width:0px;
+    border-left-style:solid;
+    border-right-style:solid;
+    border-width:0.5px;
+    text-align:center;
+}
+.t-sp{
+    width:80px;
+    border-left-style:solid;
+    border-width:1px;
+    text-align:center;
+}
+div.t-sp{
+    height:20px;
+}
+
+.t-help{
+    width:200px;
+    border-left-style:solid;
+    border-width:1px;
+    text-align:center;
+}
+div.t-help{
+    height:20px;
+    width:200px;
+}
+
+.t-mg{
+    width:17px;
+}
+
+.select{
+    cursor:pointer;
+}
+
+.sp2-line{
+    margin-top:10px;
+    width: 100%;
+    display: inline-block;
+    overflow:hidden;
+}
+
+#head-table{
+    width:100%;
+    min-width:1200px;
+}
+
+#date-fld{
+    margin-top:5px;
+    margin-bottom:5px;
+    display:inline-block;
+    width:100%;
+}
+
+#head-table thead tr{
+    border-bottom-style:solid;
+    border-top-style:solid;
+    border-width:2px;
+}
+
+#body-table > tbody > tr{
+    border-bottom-style:solid;
+    border-width:2px;
+}
+
+div.t-date > span{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#date-div input,
+#date-div span {
+    margin-left:10px;
+}
+
+#date-sp{
+    height:30px;
+    width:calc(50% - 180px);
+}
+
+#date{
+    line-height:30px;
+    text-align:center;
+    width:200px;
+}
+
+.data-td{
+    position:relative;
+}
+
+.data-td-dot{
+    border-bottom-width:1px;
+    border-bottom-style:dotted;
+}
+
+.mnc1 {
+    cursor: move;
+    height: 20px;
+    overflow: hidden;
+    position: absolute;
+    padding:2px;
+}
+.mnc2 {
+    cursor: move;
+    overflow: hidden;
+    position: absolute;
+    padding:2px;
+}
+
+.mnc3{
+    overflow: hidden;
+    position: absolute;
+    padding:2px;
+}
+
+    .mnc3 div span {
+        cursor: pointer;
+    }
+
+.mnc4{
+overflow: hidden;
+    position: absolute;
+padding:2px;
+}
+
+    .mnc3 div span {
+        cursor: pointer;
+    }
+
+.mn {
+}
+
+.egrid{
+    text-align: center;
+}
+.ui-resizable-handle{
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+}
+.ui-resizable-e{
+    cursor: e-resize;
+    width: 5px;
+    right: 0px;
+    top: 0;
+    height: 100%;
+}
+
+table.day-body tbody tr:not(:last-child){
+    border-bottom-width: 1px;
+    border-bottom-style: inset;
+}
+
+#newDate{
+    background-color:#0a92f5;
+    height:20px;
+    position:relative;
+    z-index:99;
+    width:30px;
+}
+
+.drmark{
+    border: 3px green solid;  /* 枠線を引く */
+    /*border-color:*/
+    border-radius:120px;      /* 角丸の指定 */
+    width:20px;
+    height:20px;
+}
+
+div.drname{
+    width:calc(100% - 20px);
+    text-align:center;
+}
+
+div.drname span{
+    width:100%;
+    text-align:center;
+}
+
+.list-doctor{
+    cursor:pointer;
+    margin:2px 10px 5px 10px;
+    height:20px;
+}
+
+.dropdown-menu li:hover{
+    background-color:rgba(188, 226, 234, 1);
+}
+
+.one-line{
+    width:100%;
+    margin-top:5px;
+    display:inline-block;
+}
+
+.half-line{
+    width:50%;
+    display:inline-block;
+}
+
+.multi-line div{
+    width:100%;
+}
+.multi-line div.mast-label{
+    height:30px;
+    margin-top:5px;
+}
+
+.sp-line div.mast-label{
+    width:100%;
+    height:30px;
+    margin-top:5px;
+}
+
+.table-line{
+    width:100%;
+}
+
+.mast-label{
+    color:rgba(0, 0, 254, 1);
+    margin-top:5px;
+}
+
+.list-group-item{
+    width:150px;
+}
+
+.multi-line{
+    display:inline-block;
+    width:100%;
+}
+.multi-data{
+    margin-left:10px;
+}
+.multi-data-view{
+    margin-left:10px;
+    width:calc(100% - 10px);
+}
+.sp-line{
+    display:inline-block;
+}
+
+.list-OK li.list-group-item{
+    background-color:rgba(188, 214, 237, 1);
+}
+.list-NG li.list-group-item{
+    background-color:rgba(254, 203, 203, 1);
+}
+.list-Other li.list-group-item{
+    background-color:rgba(254, 254, 203, 1);
+}
+
+.OK{
+    background-color:rgba(188, 214, 237, 1);
+}
+.NG{
+    background-color:rgba(254, 203, 203, 1);
+}
+.Other{
+    background-color:rgba(254, 254, 203, 1);
+}
+
+
+.mast-sub-table{
+    display:inline-block;
+    width:150px;
+}
+
+#today-data{
+    margin-left:10px;
+}
+
+#modal-doc-edit div.modal-dialog{
+    width:1250px;
+}
+#modal-doc-edit div div div.modal-header{
+    background-color:#DDDDDD;
+}
+
+div.fld-left{
+    width:630px;
+    margin-left:10px;
+}
+div.one-line div.mast-label{
+    width:100px;
+}
+
+div.mast-data{
+    width:183px;
+}
+div.mast-data-l{
+    width:500px;
+}
+div.mast-data input{
+    width:100%;
+}
+div.mast-data-l input{
+    width:100%;
+}
+
+div.fld-right{
+    width:600px;
+}
+
+li.edit-table{
+    height:42px;
+}
+
+li.edit-table input{
+    height:20px;
+}
+
+#body-mast{
+    width:530px;
+    margin-left:50px;
+    border:solid;
+    height:100px
+}
+div.fld-sub{
+    width:180px;
+    height:90px;
+    margin-left:40px;
+}
+div.fld-sub p{
+    width:100%;
+    height:20px;
+    margin-top:5px;
+}
+div.fld-sub p input{
+    height:20px;
+    margin-top:0px;
+    margin-left:5px;
+    margin-right:5px;
+}
+div.edit-button{
+    margin-left:100px;
+}
+div.multi-data textarea{
+    width:100%;
+    height:120px;
+}
+
+.btn-area{
+    width:560px;
+    height:30px;
+}
+#date-mst-table thead tr th,
+#date-table thead tr th{
+    color:rgba(0, 0, 254, 1);
+    font-weight:normal;
+}
+
+th{
+    text-align:center;
+}
+
+td{
+    text-align:center
+}
+
+.data-ss{
+    width:50px;
+}
+.data-s{
+    width:95px;
+}
+.data-m{
+    width:100px;
+}
+
+.data-xm{
+    width:230px;
+}
+
+.data-label{
+    width:50px;
+    margin-top:3px;
+    margin-right:5px;
+    text-align:right;
+}
+
+.data-m input.datepicker{
+    border-radius:0px;
+    border-style:ridge;
+    border-color:black;
+    border-width:1px;
+ }
+
+td input:not([type="checkbox"]),
+td select{
+    width:100%;
+}
+
+#color-pic{
+    width:30px;
+    height:30px;
+    background-image:url(../../img/schedule/color.png);
+    background-repeat:no-repeat;
+    cursor:pointer;
+    background-size:cover;
+}
+
+ul.list-group li.list-group-item{
+    height:40px;
+    padding:2px 2px 2px 2px;
+} 
+
+.data-check{
+    margin-left:15px;
+}
+
+.data-check p{
+    margin-top:3px;
+}
+.data-check p input{
+    margin-top:3px;
+}
+
+ul.list-group li.list-group-item input{
+    height:34px;
+    padding-top:0px;
+    padding-left:1px;
+    padding-right:1px;
+    padding-bottom:0px;
+} 
+
+#mast-doctor{
+    max-height:500px;
+    overflow-y:auto;
+}
+
+#other-e textarea{
+    width:590px;
+}
+
+#memo-e{
+    margin-left:0px;
+}
+
+#table-div{
+    overflow-y:auto;
+}
+
+body{
+    min-width:1280px;
+}
+
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  z-index: 1;
+  filter:alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.edit-data {
+    margin-left:5px;
+}
+
+.new-check{
+    margin-left:15px;
+    margin-top:2px;
+}
+.edit-data-full{
+    width:100%;
+    margin-left:5px;
+}
+
+.edit-data-full input:not([type="checkbox"]){
+width:calc(100% - 20px);
+}
+.edit-data input:not([type="checkbox"]){
+width:calc(100% - 20px);
+}
+.edit-data input[type="checkbox"]{
+    margin-top:3px;
+}
+
+.edit-day{
+    width:150px;
+}
+
+.view-data{
+    width:180px;
+    display:inline-block;
+    height:20px;
+}
+
+.view-data span{
+margin-top:5px;
+}
+
+div.multi-data-view span{
+width:calc(100% - 20px);
+
+}
+
+#change-doc-list{
+    width:100%;
+}
+
+.del-data{
+    color:white;
+}
+
+.mail-label{
+    width:95px;
+    text-align:center;
+    padding-top:2px;
+}
+
+.mail-val{
+    width:calc(100% - 100px);
+    margin-left:5px;
+}
+
+.mail-multi-val{
+    width:100%;
+}
+
+.mail-multi-val textarea{
+    width:98%;
+    height:400px;
+    margin-left:5px;
+}
+
+.btn-danger{
+    float:left;
+}
+
+.title-date{
+    /*overflow-x:hidden;
+    overflow-y:hidden;*/
+}
+
+.h-day{
+    color:red;
+}
+
+.s-day{
+    color:blue;
+}
+
+.footer{
+    position: fixed !important;  
+    position: absolute;  
+    bottom: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 0px;
+    border: 1px solid #6699FF;
+    background-color:#6699FF;
+}
+
+#user-memo{
+    height:80px;
+    margin-top:10px;
+    margin-bottom:5px;
+    margin-right:10px;
+    margin-left:10px;
+    width:calc(100% - 20px);
+}
+
+#edit-memo-user{
+    float:right;
+    margin-right:10px;
+}

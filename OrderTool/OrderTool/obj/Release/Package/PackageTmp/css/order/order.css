@@ -1,0 +1,207 @@
+﻿body{  
+    margin: 0;  
+    padding: 0 0 50px 0;
+    background-color:none;
+}  
+* html body{  
+    overflow: hidden;  
+}
+
+html{
+    background-image:url(../../image/order/flower-back0952.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+table thead tr th.dhead-ss
+{
+    width:60px;
+}
+
+.form-group{
+}
+
+label.control-label{
+    text-align:center;
+    padding-top:8px;
+}
+
+footer div{
+    padding:7px 0px 0px 0px;
+}
+
+.form-horizontal{
+    max-width:768px;
+    margin:auto;
+    padding:10px 20px;
+}
+
+#sex{
+    max-width:80px;
+}
+
+#birthday{
+    max-width:120px;
+}
+
+#age{
+    max-width:80px;
+}
+
+#pastmsg{
+    margin-left:10px;
+    margin-top:10px;
+    margin-right:10px;
+}
+
+#send, #edit-order{
+    float:right;
+    width:120px;
+    margin-right:10px;
+}
+
+#clear, #cancel{
+    float:left;
+    width:100px;
+    margin-left:10px;
+}
+
+#pastmsg{
+    visibility:hidden;
+    color:#b94a48;
+}
+
+.left{
+    float:left;
+}
+
+.footer{
+    position: fixed !important;  
+    position: absolute;  
+    bottom: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 50px;
+    background-image: -webkit-linear-gradient(#DDFFEA, #EEFFF5 50%, #F5FFF9);
+    background-image: -o-linear-gradient(#DDFFEA, #EEFFF5 50%, #F5FFF9);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#DDFFEA), color-stop(50%, #EEFFF5), to(#F5FFF9));
+    background-image: linear-gradient(#DDFFEA, #EEFFF5 50%, #F5FFF9);
+    border: 1px solid #DDFFEA;
+}
+
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  z-index: 1;
+  filter:alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+#ck_emergency{
+    padding-top:5px;
+}
+#isemergency{
+    margin-top:7px;
+}
+.alert-data{
+    font-size:20px;
+    color:red;
+}
+
+.error-label{
+    /*color:#b94a48;*/
+    color:blue;
+}
+.error-val{
+    border-color:#b94a48;
+}
+
+#cancel{
+  background-image: -webkit-linear-gradient(#6d7070, #474949 50%, #3d3f3f);
+  background-image: -o-linear-gradient(#6d7070, #474949 50%, #3d3f3f);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6d7070), color-stop(50%, #474949), to(#3d3f3f));
+  background-image: linear-gradient(#6d7070, #474949 50%, #3d3f3f);
+    background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6d7070', endColorstr='#ff3d3f3f', GradientType=0);
+  -webkit-filter: none;
+          filter: none;
+  border: 1px solid #2e2f2f;
+    color:ivory;
+}
+#cancel:hover{
+  background-image: -webkit-linear-gradient(#636565, #3d3f3f 50%, #333434);
+  background-image: -o-linear-gradient(#636565, #3d3f3f 50%, #333434);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#636565), color-stop(50%, #3d3f3f), to(#333434));
+  background-image: linear-gradient(#636565, #3d3f3f 50%, #333434);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff636565', endColorstr='#ff333434', GradientType=0);
+  -webkit-filter: none;
+          filter: none;
+  border: 1px solid #242525;
+    color:ivory;
+}
+
+
+#clear,#send, #edit-order, #past, #set_change{
+
+    background-image:linear-gradient(#A1A1FF, #8081FF 50%, #6b6bff);
+    background-image: -o-linear-gradient(#A1A1FF, #8081FF 50%, #6b6bff);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#A1A1FF), color-stop(50%, #8081FF), to(#6b6bff));
+    background-image: linear-gradient(#A1A1FF, #8081FF 50%, #6b6bff);
+    background-repeat: no-repeat;
+    -webkit-filter: none;
+            filter: none;
+    border:1px solid #6b6bff;
+    color:ivory;
+}
+#clear:hover,#send:hover,#edit-order:hover,#past:hover,#set_change:hover {
+  background-image: -webkit-linear-gradient(#8180FF, #6b6bff 50%, #6b6bff);
+  background-image: -o-linear-gradient(#8180FF, #6b6bff 50%, #6b6bff);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8180FF), color-stop(50%, #6b6bff), to(#6b6bff));
+  background-image: linear-gradient(#8180FF, #6b6bff 50%, #6b6bff);
+  background-repeat: no-repeat;
+  -webkit-filter: none;
+          filter: none;
+  border: 1px solid #6b6bff;
+    color:ivory;
+}
+
+
+#edit-order{
+    visibility:hidden;
+}
+
+#past,#set_change {
+    background-image:linear-gradient(#A1A1FF, #8081FF 50%, #6b6bff);
+    border:1px solid #7C92FF;
+    color: ivory;
+}
+
+#study_table thead tr
+{
+    background-color:#f5f5f5;
+}
+
+#pastmsg{
+    font-size:13px;
+}

@@ -1,0 +1,9 @@
+C:\開発\OrderTool_Reception_Serv\OrderTool_Reception_Serv\bin\Release\OrderTool_Reception_Serv.dll
+C:\開発\OrderTool_Reception_Serv\OrderTool_Reception_Serv\bin\Release\OrderTool_Reception_Serv.pdb
+C:\開発\OrderTool_Reception_Serv\OrderTool_Reception_Serv\bin\Release\LogController.dll
+C:\開発\OrderTool_Reception_Serv\OrderTool_Reception_Serv\bin\Release\Mono.Security.dll
+C:\開発\OrderTool_Reception_Serv\OrderTool_Reception_Serv\bin\Release\MyAccDB.dll
+C:\開発\OrderTool_Reception_Serv\OrderTool_Reception_Serv\bin\Release\Npgsql.dll
+C:\開発\OrderTool_Reception_Serv\OrderTool_Reception_Serv\obj\Release\OrderTool_Reception_Serv.dll
+C:\開発\OrderTool_Reception_Serv\OrderTool_Reception_Serv\obj\Release\OrderTool_Reception_Serv.pdb
+C:\開発\OrderTool_Reception_Serv\OrderTool_Reception_Serv\obj\Release\OrderTool_Reception_Serv.csprojResolveAssemblyReference.cache

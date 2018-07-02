@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+このファイルは、Web プロジェクトの発行/パッケージ処理で使用されます。この MSBuild ファイルを編集することによって、
+この処理の動作をカスタマイズできます。詳細については、http://go.microsoft.com/fwlink/?LinkID=208121 を参照してください。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\実行環境\OrderSysEdit</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/LogController.dll">
+      <publishTime>07/09/2016 17:11:12</publishTime>
+    </File>
+    <File Include="bin/OrderTool.dll">
+      <publishTime>02/23/2018 15:59:07</publishTime>
+    </File>
+    <File Include="css/common/arrow_asc.png">
+      <publishTime>12/25/2012 17:24:34</publishTime>
+    </File>
+    <File Include="css/common/arrow_desc.png">
+      <publishTime>12/25/2012 17:24:06</publishTime>
+    </File>
+    <File Include="css/common/bootstrap-datepicker3.css">
+      <publishTime>05/06/2016 19:27:04</publishTime>
+    </File>
+    <File Include="css/common/bootstrap-datepicker3.css.map">
+      <publishTime>05/06/2016 19:23:44</publishTime>
+    </File>
+    <File Include="css/common/bootstrap-datepicker3.min.css">
+      <publishTime>05/06/2016 19:27:04</publishTime>
+    </File>
+    <File Include="css/common/bootstrap-datepicker3.min.css.map">
+      <publishTime>05/06/2016 19:27:04</publishTime>
+    </File>
+    <File Include="css/common/bootstrap-datepicker3.standalone.css">
+      <publishTime>05/06/2016 19:27:04</publishTime>
+    </File>
+    <File Include="css/common/bootstrap-datepicker3.standalone.css.map">
+      <publishTime>05/06/2016 19:23:44</publishTime>
+    </File>
+    <File Include="css/common/bootstrap-datepicker3.standalone.min.css">
+      <publishTime>05/06/2016 19:27:04</publishTime>
+    </File>
+    <File Include="css/common/bootstrap-datepicker3.standalone.min.css.map">
+      <publishTime>05/06/2016 19:27:04</publishTime>
+    </File>
+    <File Include="css/common/bootstrap-theme.css">
+      <publishTime>07/05/2016 14:02:52</publishTime>
+    </File>
+    <File Include="css/common/bootstrap-theme.css.map">
+      <publishTime>07/05/2016 14:02:52</publishTime>
+    </File>
+    <File Include="css/common/bootstrap-theme.min.css">
+      <publishTime>07/05/2016 14:02:52</publishTime>
+    </File>
+    <File Include="css/common/bootstrap-theme.min.css.map">
+      <publishTime>07/05/2016 14:02:52</publishTime>
+    </File>
+    <File Include="css/common/bootstrap.css">
+      <publishTime>09/29/2017 17:31:25</publishTime>
+    </File>
+    <File Include="css/common/bootstrap.css.map">
+      <publishTime>07/05/2016 14:02:52</publishTime>
+    </File>
+    <File Include="css/common/bootstrap.min.css">
+      <publishTime>10/21/2016 06:01:10</publishTime>
+    </File>
+    <File Include="css/common/bootstrap.min.css.map">
+      <publishTime>07/05/2016 14:02:52</publishTime>
+    </File>
+    <File Include="css/common/bootswatch.less">
+      <publishTime>10/21/2016 06:01:10</publishTime>
+    </File>
+    <File Include="css/common/jquery-1.12.4.min.js">
+      <publishTime>07/08/2016 18:52:30</publishTime>
+    </File>
+    <File Include="css/common/sticky-footer.css">
+      <publishTime>07/09/2016 10:53:59</publishTime>
+    </File>
+    <File Include="css/common/style.css">
+      <publishTime>02/25/2013 17:24:40</publishTime>
+    </File>
+    <File Include="css/common/typeahead.css">
+      <publishTime>05/27/2015 09:38:48</publishTime>
+    </File>
+    <File Include="css/common/variables.less">
+      <publishTime>07/07/2016 18:56:01</publishTime>
+    </File>
+    <File Include="css/common/_bootswatch.scss">
+      <publishTime>10/21/2016 06:01:10</publishTime>
+    </File>
+    <File Include="css/common/_variables.scss">
+      <publishTime>07/07/2016 18:56:22</publishTime>
+    </File>
+    <File Include="css/order/jquery-ui.js">
+      <publishTime>09/29/2017 16:55:09</publishTime>
+    </File>
+    <File Include="css/order/order.css">
+      <publishTime>09/29/2017 17:29:57</publishTime>
+    </File>
+    <File Include="css/search/search.css">
+      <publishTime>09/28/2017 10:20:11</publishTime>
+    </File>
+    <File Include="icon/common/ProMed.ico">
+      <publishTime>10/24/2016 09:57:31</publishTime>
+    </File>
+    <File Include="image/common/img-loading.gif">
+      <publishTime>07/13/2016 17:53:33</publishTime>
+    </File>
+    <File Include="image/order/flower-back0952.jpg">
+      <publishTime>10/20/2016 15:34:55</publishTime>
+    </File>
+    <File Include="image/order/Page_Left.png">
+      <publishTime>07/11/2017 18:22:17</publishTime>
+    </File>
+    <File Include="image/order/Page_Right.png">
+      <publishTime>07/11/2017 18:21:06</publishTime>
+    </File>
+    <File Include="Order.aspx">
+      <publishTime>10/31/2017 05:07:56</publishTime>
+    </File>
+    <File Include="OrderTool_WS.asmx">
+      <publishTime>08/20/2016 15:37:32</publishTime>
+    </File>
+    <File Include="script/common/bootstrap-datepicker.ja.min.js">
+      <publishTime>05/06/2016 19:23:44</publishTime>
+    </File>
+    <File Include="script/common/bootstrap-datepicker.min.js">
+      <publishTime>05/06/2016 19:27:04</publishTime>
+    </File>
+    <File Include="script/common/bootstrap.js">
+      <publishTime>07/04/2017 16:16:14</publishTime>
+    </File>
+    <File Include="script/common/bootstrap.min.js">
+      <publishTime>07/05/2016 14:02:53</publishTime>
+    </File>
+    <File Include="script/common/jquery-1.12.4.min.js">
+      <publishTime>07/08/2016 18:51:48</publishTime>
+    </File>
+    <File Include="script/common/req.js">
+      <publishTime>10/14/2016 12:26:38</publishTime>
+    </File>
+    <File Include="script/common/typeahead.bundle.js">
+      <publishTime>09/06/2016 11:33:41</publishTime>
+    </File>
+    <File Include="script/common/util.js">
+      <publishTime>09/05/2016 16:28:23</publishTime>
+    </File>
+    <File Include="script/order/jquery.autoKana.js">
+      <publishTime>10/21/2016 15:51:26</publishTime>
+    </File>
+    <File Include="script/order/order.js">
+      <publishTime>10/04/2017 11:40:15</publishTime>
+    </File>
+    <File Include="script/search/search.js">
+      <publishTime>09/29/2017 16:14:10</publishTime>
+    </File>
+    <File Include="script/viewlist/viewlist.js">
+      <publishTime>09/29/2017 10:45:17</publishTime>
+    </File>
+    <File Include="Search.aspx">
+      <publishTime>09/29/2017 16:12:36</publishTime>
+    </File>
+    <File Include="Service References/QRService/OrderTool.QRService.DicomQRItem.datasource">
+      <publishTime>06/30/2017 14:42:59</publishTime>
+    </File>
+    <File Include="View.aspx">
+      <publishTime>10/21/2016 07:05:59</publishTime>
+    </File>
+    <File Include="ViewList.aspx">
+      <publishTime>09/29/2017 09:29:33</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/23/2018 15:59:07</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

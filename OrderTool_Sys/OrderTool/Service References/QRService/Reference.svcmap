@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6922f571-a274-4635-8d56-48ad9cbadc53" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.pipe://localhost/WcfDicomQRService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="af7e5878-d9b8-47ea-9e1a-ced7eb73c49a" SourceId="1" SourceUrl="net.pipe://localhost/WcfDicomQRService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="77f7e71c-c744-46a0-895a-1416d5cb7d30" SourceId="1" SourceUrl="net.pipe://localhost/WcfDicomQRService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="ed50e3ff-f6bd-4bae-84ab-9413f3d24d87" SourceId="1" SourceUrl="net.pipe://localhost/WcfDicomQRService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="af6c7e2a-246b-4ec9-a684-3cd19d21c0ba" SourceId="1" SourceUrl="net.pipe://localhost/WcfDicomQRService/mex" />
+    <MetadataFile FileName="WcfDicomQRContract.xsd" MetadataType="Schema" ID="c42a2310-e278-4dc7-89d9-02aa2f32ada9" SourceId="1" SourceUrl="net.pipe://localhost/WcfDicomQRService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

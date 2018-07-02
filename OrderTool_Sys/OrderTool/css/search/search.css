@@ -1,0 +1,143 @@
+﻿body {
+}
+/*テーブルヘッダ*/
+
+table thead tr
+{
+    background-color:#f5f5f5;
+}
+table thead tr th
+{
+    text-align:center;
+}
+
+table thead tr th.dhead-ss
+{
+    width:60px;
+}
+table thead tr th.dhead-s
+{
+    width:80px;
+}
+table thead tr th.dhead-m
+{
+    width:120px;
+}
+
+#main-form{
+    padding-top:10px;
+    padding-left:5px;
+    padding-right:15px;
+}
+
+/*テーブルデータ*/
+table tbody
+{
+    border-bottom:2px solid #dddddd;
+}
+
+    table tbody tr td
+    {
+        text-align:center;
+    }
+        table tbody tr td.dbody
+        {
+            padding:2px;
+        }
+
+#study_table tbody tr td input{
+    background-image:linear-gradient(#A1A1FF, #8081FF 50%, #6b6bff);
+    background-image: -o-linear-gradient(#A1A1FF, #8081FF 50%, #6b6bff);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#A1A1FF), color-stop(50%, #8081FF), to(#6b6bff));
+    background-image: linear-gradient(#A1A1FF, #8081FF 50%, #6b6bff);
+    background-repeat: no-repeat;
+    -webkit-filter: none;
+            filter: none;
+    border:1px solid #6b6bff;
+    color:ivory;
+}
+
+#study_table tbody tr td input:hover {
+  background-image: -webkit-linear-gradient(#8180FF, #6b6bff 50%, #6b6bff);
+  background-image: -o-linear-gradient(#8180FF, #6b6bff 50%, #6b6bff);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8180FF), color-stop(50%, #6b6bff), to(#6b6bff));
+  background-image: linear-gradient(#8180FF, #6b6bff 50%, #6b6bff);
+  background-repeat: no-repeat;
+  -webkit-filter: none;
+          filter: none;
+  border: 1px solid #6b6bff;
+    color:ivory;
+}
+
+#clear, #search {
+    width:100%;
+}
+
+#clear, #search{
+    background-image:linear-gradient(#A1A1FF, #8081FF 50%, #6b6bff);
+    background-image: -o-linear-gradient(#A1A1FF, #8081FF 50%, #6b6bff);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#A1A1FF), color-stop(50%, #8081FF), to(#6b6bff));
+    background-image: linear-gradient(#A1A1FF, #8081FF 50%, #6b6bff);
+    background-repeat: no-repeat;
+    -webkit-filter: none;
+            filter: none;
+    border:1px solid #6b6bff;
+    color:ivory;
+}
+#clear:hover,#search:hover{
+  background-image: -webkit-linear-gradient(#8180FF, #6b6bff 50%, #6b6bff);
+  background-image: -o-linear-gradient(#8180FF, #6b6bff 50%, #6b6bff);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8180FF), color-stop(50%, #6b6bff), to(#6b6bff));
+  background-image: linear-gradient(#8180FF, #6b6bff 50%, #6b6bff);
+  background-repeat: no-repeat;
+  -webkit-filter: none;
+          filter: none;
+  border: 1px solid #6b6bff;
+    color:ivory;
+}
+
+table
+{
+    border-top:2px solid #dddddd;
+}
+
+#title
+{
+    padding-left:10px;
+}
+
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  z-index: 1;
+  filter:alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.alert-data{
+    color:red;
+}
+
+.point{
+    cursor:pointer;
+}

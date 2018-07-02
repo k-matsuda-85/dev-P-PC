@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" />
+  <xs:element name="GetNodeNames">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNodeNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetNodeNamesResult" nillable="true" type="q1:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudyFind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NodeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PatientsName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PatientID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AccessionNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ModalitiesinStudy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudyFindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" minOccurs="0" name="StudyFindResult" nillable="true" type="q2:ArrayOfDicomQRItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeriesFind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NodeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeriesNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeriesInstanceUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeriesFindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" minOccurs="0" name="SeriesFindResult" nillable="true" type="q3:ArrayOfDicomQRItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageFind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NodeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeriesInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SOPInstanceUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageFindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" minOccurs="0" name="ImageFindResult" nillable="true" type="q4:ArrayOfDicomQRItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudyMove">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NodeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PatientsName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PatientID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AccessionNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ModalitiesinStudy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudyMoveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StudyMoveResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeriesMove">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NodeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeriesNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeriesInstanceUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeriesMoveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SeriesMoveResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageMove">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NodeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeriesInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SOPInstanceUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageMoveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImageMoveResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudyFindEx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" minOccurs="0" name="Node" nillable="true" type="q5:DicomQRNode" />
+        <xs:element minOccurs="0" name="PatientsName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PatientID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AccessionNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ModalitiesinStudy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudyFindExResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" minOccurs="0" name="StudyFindExResult" nillable="true" type="q6:ArrayOfDicomQRItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeriesFindEx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" minOccurs="0" name="Node" nillable="true" type="q7:DicomQRNode" />
+        <xs:element minOccurs="0" name="StudyInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeriesNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeriesInstanceUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeriesFindExResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" minOccurs="0" name="SeriesFindExResult" nillable="true" type="q8:ArrayOfDicomQRItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageFindEx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" minOccurs="0" name="Node" nillable="true" type="q9:DicomQRNode" />
+        <xs:element minOccurs="0" name="StudyInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeriesInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SOPInstanceUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageFindExResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" minOccurs="0" name="ImageFindExResult" nillable="true" type="q10:ArrayOfDicomQRItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudyMoveEx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" minOccurs="0" name="Node" nillable="true" type="q11:DicomQRNode" />
+        <xs:element minOccurs="0" name="PatientsName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PatientID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AccessionNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StudyInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ModalitiesinStudy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudyMoveExResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StudyMoveExResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeriesMoveEx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" minOccurs="0" name="Node" nillable="true" type="q12:DicomQRNode" />
+        <xs:element minOccurs="0" name="StudyInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeriesNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeriesInstanceUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeriesMoveExResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SeriesMoveExResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageMoveEx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" minOccurs="0" name="Node" nillable="true" type="q13:DicomQRNode" />
+        <xs:element minOccurs="0" name="StudyInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeriesInstanceUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SOPInstanceUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageMoveExResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImageMoveExResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Echo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NodeName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EchoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EchoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EchoEx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WcfDicomQRContract" minOccurs="0" name="Node" nillable="true" type="q14:DicomQRNode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EchoExResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EchoExResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
